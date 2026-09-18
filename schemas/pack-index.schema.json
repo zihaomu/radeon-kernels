@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://radeon-kernels.dev/schemas/pack-index.schema.json",
+  "title": "Radeon Kernels signed kernel-pack index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "operator", "semantic_version", "packs"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "operator": {"$ref": "#/$defs/identifier"},
+    "semantic_version": {"$ref": "#/$defs/version"},
+    "packs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/pack"}
+    }
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["architecture", "wavefront_size", "rocm_abi", "python_abi", "pytorch_version"],
+      "properties": {
+        "architecture": {"type": "string", "pattern": "^gfx[0-9a-f]+$"},
+        "wavefront_size": {"enum": [32, 64]},
+        "rocm_abi": {"$ref": "#/$defs/version"},
+        "python_abi": {"type": "string", "pattern": "^cp[0-9]{2,3}$"},
+        "pytorch_version": {"type": "string", "minLength": 1}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operator", "semantic_version", "provider", "artifact", "entrypoint", "sha256", "format", "evidence_id"],
+      "properties": {
+        "operator": {"$ref": "#/$defs/identifier"},
+        "semantic_version": {"$ref": "#/$defs/version"},
+        "provider": {"$ref": "#/$defs/identifier"},
+        "artifact": {"type": "string", "minLength": 1},
+        "entrypoint": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "format": {"enum": ["python_extension", "hsaco"]},
+        "evidence_id": {"$ref": "#/$defs/identifier"}
+      }
+    },
+    "pack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pack_id", "pack_version", "environment", "manifest_sha256", "manifest_signature", "release_file", "release_sha256", "release_size", "artifacts", "approval_id"],
+      "properties": {
+        "pack_id": {"$ref": "#/$defs/identifier"},
+        "pack_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "environment": {"$ref": "#/$defs/environment"},
+        "manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "manifest_signature": {"$ref": "#/$defs/signature"},
+        "release_file": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+\\.tar\\.gz$"},
+        "release_sha256": {"$ref": "#/$defs/sha256"},
+        "release_size": {"type": "integer", "minimum": 1},
+        "artifacts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/artifact"}},
+        "approval_id": {"$ref": "#/$defs/identifier"}
+      }
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "algorithm", "key_id", "signed_file", "signed_sha256", "signature"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "algorithm": {"const": "ed25519"},
+        "key_id": {"$ref": "#/$defs/identifier"},
+        "signed_file": {"const": "manifest.json"},
+        "signed_sha256": {"$ref": "#/$defs/sha256"},
+        "signature": {"type": "string", "minLength": 86, "maxLength": 88}
+      }
+    }
+  }
+}

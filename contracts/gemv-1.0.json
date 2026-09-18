@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "operator": "gemv",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "x", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"},
+    {"name": "weight", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "output", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"}
+  ],
+  "parameters": {"weight_layout": "nk", "maximum_m": 32},
+  "capabilities": {"inference": true, "backward": true, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "fp32", "absolute_tolerance": 0.02, "relative_tolerance": 0.02, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.gemv.reference.gemv_reference"}
+}

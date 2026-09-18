@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "operator": "gemm",
+  "semantic_version": "1.0",
+  "default_fallbacks": [
+    "torch"
+  ],
+  "entries": [
+    {
+      "id": "gemm-gfx1151-fp16-m256-n4096-k4096",
+      "priority": 100,
+      "environment": {
+        "architecture": "gfx1151",
+        "wavefront_size": 32,
+        "rocm_abi": "7.15",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719"
+      },
+      "workload": {
+        "dtype": "fp16",
+        "layout": "nn",
+        "m": [256, 256],
+        "n": [4096, 4096],
+        "k": [4096, 4096],
+        "contiguous": true,
+        "requires_grad": false
+      },
+      "winner": {
+        "provider": "native",
+        "artifact": "lib/radeon_kernels_wmma_gfx1151.so",
+        "entrypoint": "gemm_out",
+        "sha256": "c8fb5969147b2e47dd8857e547a5fbd2a9d166bb58b1ad0871aa78ffcc8c28b6",
+        "format": "python_extension"
+      },
+      "launch": {
+        "variant": 8
+      },
+      "fallbacks": [
+        "torch"
+      ],
+      "evidence_id": "asmevo-gemm-20260917t050538z-gfx1151-k0"
+    },
+    {
+      "id": "gemm-gfx1201-fp16-m512-n512-k512",
+      "priority": 100,
+      "environment": {
+        "architecture": "gfx1201",
+        "wavefront_size": 32,
+        "rocm_abi": "7.2",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3"
+      },
+      "workload": {
+        "dtype": "fp16",
+        "layout": "nn",
+        "m": [512, 512],
+        "n": [512, 512],
+        "k": [512, 512],
+        "contiguous": true,
+        "requires_grad": false
+      },
+      "winner": {
+        "provider": "native",
+        "artifact": "lib/radeon_kernels_wmma_gfx1201.so",
+        "entrypoint": "gemm_out",
+        "sha256": "501a819be673b653445dcbbd5626bbfbdef64ffa6918cf2d93f39e20b6842046",
+        "format": "python_extension"
+      },
+      "launch": {
+        "variant": 9
+      },
+      "fallbacks": [
+        "torch"
+      ],
+      "evidence_id": "asmevo-gemm-20260917t050538z-gfx1201-k0"
+    }
+  ]
+}

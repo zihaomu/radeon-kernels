@@ -1,0 +1,23 @@
+schema_version: 1
+operator: gemv
+semantic_version: "1.0"
+oracle: torch_fp32_reference
+baseline: torch_mm
+weight_layout: nk
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: decode-h4096, m: 1, n: 4096, k: 4096}
+  - {id: decode-ffn-up-h4096, m: 1, n: 11008, k: 4096}
+  - {id: decode-ffn-down-h4096, m: 1, n: 4096, k: 11008}
+  - {id: decode-h8192, m: 1, n: 8192, k: 8192}
+  - {id: decode-ffn-up-h8192, m: 1, n: 28672, k: 8192}
+  - {id: speculative-m2-h4096, m: 2, n: 4096, k: 4096}
+  - {id: speculative-m4-h4096, m: 4, n: 4096, k: 4096}
+  - {id: speculative-m8-ffn-down-h4096, m: 8, n: 4096, k: 11008}
+  - {id: batched-m16-ffn-up-h4096, m: 16, n: 11008, k: 4096}
+  - {id: batched-m32-h8192, m: 32, n: 8192, k: 8192}
+dtypes: [fp16, bf16]

@@ -1,0 +1,135 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-swiglu-gfx1201-prefill-h11008-fp16-f118427c328415cd-approved",
+  "candidate_content_hash": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271",
+  "captured_at": "2026-09-17T12:43:52.435102+00:00",
+  "correctness": {
+    "cases": [
+      {
+        "case_id": "prefill-h11008-fp16-seed20260917",
+        "finite": true,
+        "max_absolute_error": 0.0001220703125,
+        "runtime_ok": true,
+        "seed": 20260917
+      },
+      {
+        "case_id": "prefill-h11008-fp16-seed20260918",
+        "finite": true,
+        "max_absolute_error": 0.0001220703125,
+        "runtime_ok": true,
+        "seed": 20260918
+      },
+      {
+        "case_id": "prefill-h11008-fp16-seed20260919",
+        "finite": true,
+        "max_absolute_error": 0.0001220703125,
+        "runtime_ok": true,
+        "seed": 20260919
+      }
+    ],
+    "oracle": "torch_fp32_reference",
+    "passed": true
+  },
+  "decision": "promote",
+  "environment": {
+    "architecture": "gfx1201",
+    "python_abi": "cp312",
+    "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+    "rocm_abi": "7.2",
+    "wavefront_size": 32
+  },
+  "evidence_id": "m5-20260917-swiglu-gfx1201-prefill-h11008-fp16",
+  "guarantee_boundary": "Exact gfx1201, ROCm 7.2, cp312, PyTorch 2.11.0+rocm7.2.4.git5fbd98f3, workload {\"contiguous\": true, \"dtype\": \"fp16\", \"hidden\": 11008, \"requires_grad\": false, \"tokens\": 1024}, contiguous inference only.",
+  "operator": "swiglu",
+  "schema_version": "1.0",
+  "semantic_version": "1.0",
+  "source_evidence_hashes": {
+    "candidate_source": "da772f6e5539af28202915969aae33264d85c081c3942a5148505a9585657edf",
+    "dispatch": "891127c68651adb353ffbd64403db557ab1ca3f0f31385880108f13134cf6cb2",
+    "evaluation": "1c88909800682a1b5083848bf254bb605d2f660fdd8e1bcec92caeeeb08963a6",
+    "manifest": "5dcc1b9680b7cf61666b38ac26176924078d8c36a2435971dbc61407d415c21d"
+  },
+  "timing": {
+    "baseline": "torch_fp32_reference",
+    "baseline_cv": 0.00032245503702286104,
+    "baseline_median_ms": 0.9077901942755586,
+    "baseline_samples_ms": [
+      0.9069448491578461,
+      0.9079320764028898,
+      0.9073729976530998,
+      0.9078961444157426,
+      0.9074385448168683,
+      0.9078283002299647,
+      0.9077334660355763,
+      0.9079392956149194,
+      0.907358887375042,
+      0.9080047607421875,
+      0.9075380550917759,
+      0.9077977006153394,
+      0.9077826879357779,
+      0.9080361807218162,
+      0.9074461742113995,
+      0.9081006614110803,
+      0.9075700493269069,
+      0.9080063194356939,
+      0.9076814548943632,
+      0.9080947547830561,
+      0.9074682420299899,
+      0.9079024612262685,
+      0.9074142620127689,
+      0.9078058222288726,
+      0.9076741536458334,
+      0.9082722817697833,
+      0.9073857953471522,
+      0.9081048452725975,
+      0.9076119699785786,
+      0.9079305997458837
+    ],
+    "candidate_cv": 0.006973059527327555,
+    "candidate_median_ms": 0.08772634690807712,
+    "candidate_samples_ms": [
+      0.08752816723239037,
+      0.08877439396355742,
+      0.08716560691915533,
+      0.08808742030974358,
+      0.08716689899403562,
+      0.08828945570094611,
+      0.08718882324875042,
+      0.0880992438203545,
+      0.08722066366544334,
+      0.0888684795748803,
+      0.08717808672176894,
+      0.08817935246293263,
+      0.08713421770321425,
+      0.08792452658376386,
+      0.08717808672176894,
+      0.08874471725956086,
+      0.08713464839484102,
+      0.08827171530774845,
+      0.08713595072428386,
+      0.08814893743043305,
+      0.08718067087152953,
+      0.08880462441393124,
+      0.08714454404769405,
+      0.08815452616701844,
+      0.08720648160544775,
+      0.08808786125593288,
+      0.08730131579983619,
+      0.08853408854494813,
+      0.08711788218508484,
+      0.08802217052828881
+    ],
+    "confidence_interval_pct": [
+      90.29286808936548,
+      90.39461202576342
+    ],
+    "latency_reduction_pct": 90.33627511496914,
+    "stable": true
+  },
+  "workload": {
+    "contiguous": true,
+    "dtype": "fp16",
+    "hidden": 11008,
+    "requires_grad": false,
+    "tokens": 1024
+  }
+}

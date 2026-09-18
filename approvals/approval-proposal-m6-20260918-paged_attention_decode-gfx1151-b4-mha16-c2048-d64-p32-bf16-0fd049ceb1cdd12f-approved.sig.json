@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "aeGTbXkZ5c0+UqQeRx1VIg6Y+do+wjBmL5lTVBOd2oShV5mtwGwB/L3jmrpzjMN1PVa0+gi3W8Ih7okRqFsMDg==",
+  "signed_file": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b4-mha16-c2048-d64-p32-bf16-0fd049ceb1cdd12f-approved.json",
+  "signed_sha256": "d2685efcfe70e3d00a5d20777bc68193ff4e72764078121d3b40d1e32ede4ede"
+}

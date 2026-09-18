@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-kv_cache_append-gfx1151-prefill-t128-mha32-d128-p32-bf16-53f51b7ad369d8ed-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m6-20260918-kv_cache_append-gfx1151-prefill-t128-mha32-d128-p32-bf16-53f51b7ad369d8ed",
+  "proposal_sha256": "2011ea88fd78d60450340c945b169809c0d5cb5babf7ee82c2d80276aafb4d93",
+  "reason": "reviewed correctness, timing stability, exact paged-layout scope, and artifact lineage for all 33 KV-cache proposals",
+  "reviewed_at": "2026-09-18T02:34:26.278320+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

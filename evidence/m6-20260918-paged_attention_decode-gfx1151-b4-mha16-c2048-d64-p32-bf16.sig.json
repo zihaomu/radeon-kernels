@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "BOTOT+cJeTj/0ZUeE/wc6Q5G/mpHhfsiXT3xseEv8rZLonsJGtjH3LdzwjNr2bedsqamCjBkW7y70a5lslayAQ==",
+  "signed_file": "m6-20260918-paged_attention_decode-gfx1151-b4-mha16-c2048-d64-p32-bf16.json",
+  "signed_sha256": "f0713f458d4a803f81c7a6a2618434e2bb6a12f51108ce78a15f95ce8642b039"
+}

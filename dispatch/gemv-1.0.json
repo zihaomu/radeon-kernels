@@ -1,0 +1,106 @@
+{
+  "default_fallbacks": [
+    "torch"
+  ],
+  "entries": [
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "gemv-gfx1201-decode-ffn-down-h4096-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_gemv_gfx1201-repeat2.so",
+        "entrypoint": "gemv_wave2",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2"
+      },
+      "workload": {
+        "contiguous": true,
+        "dtype": "bf16",
+        "k": 11008,
+        "m": 1,
+        "n": 4096,
+        "requires_grad": false,
+        "weight_layout": "nk"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "gemv-gfx1201-decode-h8192-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_gemv_gfx1201-repeat2.so",
+        "entrypoint": "gemv_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2"
+      },
+      "workload": {
+        "contiguous": true,
+        "dtype": "bf16",
+        "k": 8192,
+        "m": 1,
+        "n": 8192,
+        "requires_grad": false,
+        "weight_layout": "nk"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "gemv-gfx1201-decode-h8192-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_gemv_gfx1201-repeat2.so",
+        "entrypoint": "gemv_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2"
+      },
+      "workload": {
+        "contiguous": true,
+        "dtype": "fp16",
+        "k": 8192,
+        "m": 1,
+        "n": 8192,
+        "requires_grad": false,
+        "weight_layout": "nk"
+      }
+    }
+  ],
+  "operator": "gemv",
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

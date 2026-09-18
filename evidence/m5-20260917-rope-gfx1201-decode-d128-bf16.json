@@ -1,0 +1,138 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-rope-gfx1201-decode-d128-bf16-bbde283de3ff6db3-approved",
+  "candidate_content_hash": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271",
+  "captured_at": "2026-09-17T12:43:52.435102+00:00",
+  "correctness": {
+    "cases": [
+      {
+        "case_id": "decode-d128-bf16-seed20260917",
+        "finite": true,
+        "max_absolute_error": 0.0,
+        "runtime_ok": true,
+        "seed": 20260917
+      },
+      {
+        "case_id": "decode-d128-bf16-seed20260918",
+        "finite": true,
+        "max_absolute_error": 0.0,
+        "runtime_ok": true,
+        "seed": 20260918
+      },
+      {
+        "case_id": "decode-d128-bf16-seed20260919",
+        "finite": true,
+        "max_absolute_error": 0.0,
+        "runtime_ok": true,
+        "seed": 20260919
+      }
+    ],
+    "oracle": "torch_fp32_reference",
+    "passed": true
+  },
+  "decision": "promote",
+  "environment": {
+    "architecture": "gfx1201",
+    "python_abi": "cp312",
+    "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+    "rocm_abi": "7.2",
+    "wavefront_size": 32
+  },
+  "evidence_id": "m5-20260917-rope-gfx1201-decode-d128-bf16",
+  "guarantee_boundary": "Exact gfx1201, ROCm 7.2, cp312, PyTorch 2.11.0+rocm7.2.4.git5fbd98f3, workload {\"contiguous\": true, \"dtype\": \"bf16\", \"head_dim\": 128, \"kv_heads\": 8, \"mode\": \"split_half\", \"q_heads\": 32, \"requires_grad\": false, \"tokens\": 1}, contiguous inference only.",
+  "operator": "rope",
+  "schema_version": "1.0",
+  "semantic_version": "1.0",
+  "source_evidence_hashes": {
+    "candidate_source": "da772f6e5539af28202915969aae33264d85c081c3942a5148505a9585657edf",
+    "dispatch": "6c966d7c954dac74463a642ddfaa87edc74f7c1ddee6c224b638e4e502205402",
+    "evaluation": "1c88909800682a1b5083848bf254bb605d2f660fdd8e1bcec92caeeeb08963a6",
+    "manifest": "b1c4177bbe115d7f765de2bddbdd26fcd6e30a495fa583c768ea2c836452db53"
+  },
+  "timing": {
+    "baseline": "torch_fp32_reference",
+    "baseline_cv": 0.004281482769433138,
+    "baseline_median_ms": 0.07808093020790502,
+    "baseline_samples_ms": [
+      0.0783730788752135,
+      0.0787048288363355,
+      0.0778905016529737,
+      0.07759592053700394,
+      0.07788993022058979,
+      0.07762586668274503,
+      0.07824783737038472,
+      0.07828208727714343,
+      0.07806785676160805,
+      0.07811814795943246,
+      0.07788537420563692,
+      0.07793905281344889,
+      0.07833988431655121,
+      0.07796380973537924,
+      0.07818171080307439,
+      0.07776651112174215,
+      0.07841592085988898,
+      0.07796603368844097,
+      0.07803427609998366,
+      0.0781108222992314,
+      0.07814455225400115,
+      0.07819329389193763,
+      0.0781585703655454,
+      0.07816399639917289,
+      0.07871768349095394,
+      0.07739803504686446,
+      0.0776976509454601,
+      0.07744969562319448,
+      0.07809400365420198,
+      0.07733353011199498
+    ],
+    "candidate_cv": 0.015207371190011677,
+    "candidate_median_ms": 0.0057743914857727955,
+    "candidate_samples_ms": [
+      0.005684682714794329,
+      0.005754573785985208,
+      0.005788108115254143,
+      0.005930967498243901,
+      0.005725168827896015,
+      0.005774384728970959,
+      0.005889982668816159,
+      0.005673564236495498,
+      0.005769324206147599,
+      0.006001195766021687,
+      0.005754519731570513,
+      0.005810982141739283,
+      0.005845827290564575,
+      0.005792117151010696,
+      0.005767218657994238,
+      0.005905596672603797,
+      0.005664927113233147,
+      0.005740688236457938,
+      0.0058999962491384245,
+      0.005774398242574632,
+      0.005719878573810202,
+      0.005919388913915225,
+      0.005668813883051699,
+      0.005696936335801757,
+      0.0058541265737350814,
+      0.005779257991857696,
+      0.005879685302816744,
+      0.005857148472918512,
+      0.005688355197468911,
+      0.005711403613791935
+    ],
+    "confidence_interval_pct": [
+      92.5325751681821,
+      92.64363024141899
+    ],
+    "latency_reduction_pct": 92.60460720639803,
+    "stable": true
+  },
+  "workload": {
+    "contiguous": true,
+    "dtype": "bf16",
+    "head_dim": 128,
+    "kv_heads": 8,
+    "mode": "split_half",
+    "q_heads": 32,
+    "requires_grad": false,
+    "tokens": 1
+  }
+}

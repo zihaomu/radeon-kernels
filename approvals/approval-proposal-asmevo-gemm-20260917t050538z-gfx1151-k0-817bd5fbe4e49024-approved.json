@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-asmevo-gemm-20260917t050538z-gfx1151-k0-817bd5fbe4e49024-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-asmevo-gemm-20260917t050538z-gfx1151-k0-817bd5fbe4e49024",
+  "proposal_sha256": "62b34acd5673b7a18c78fd7c7bc38a20f479f797633736de1dc2148218723a89",
+  "reason": "Reviewed all deterministic promotion gates, sanitized evidence, compatibility boundary, and artifact lineage.",
+  "reviewed_at": "2026-09-17T10:32:01.931105+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

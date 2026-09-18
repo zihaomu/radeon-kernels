@@ -1,0 +1,18 @@
+schema_version: 1
+operator: kv_cache_copy
+semantic_version: "1.0"
+oracle: torch_snapshot_index_copy
+baseline: torch_snapshot_index_copy
+layout: block_slot_head_dim
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: beam-pairs1-gqa8-d128-p16, pairs: 1, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: beam-pairs8-gqa8-d128-p16, pairs: 8, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: beam-pairs32-gqa8-d128-p16, pairs: 32, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: beam-pairs64-gqa8-d256-p16, pairs: 64, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 256}
+  - {id: beam-pairs32-mha32-d128-p32, pairs: 32, num_blocks: 128, block_size: 32, kv_heads: 32, head_dim: 128}
+dtypes: [fp16, bf16]

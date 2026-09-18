@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "operator": "sdpa",
+  "semantic_version": "1.0",
+  "default_fallbacks": ["torch"],
+  "entries": []
+}

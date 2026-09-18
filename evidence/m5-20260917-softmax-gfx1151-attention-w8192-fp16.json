@@ -1,0 +1,135 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-softmax-gfx1151-attention-w8192-fp16-53bbceb8c212ff34-approved",
+  "candidate_content_hash": "ea202a78725df1b9312ebd2a0c2065ce7865e876442b555abce9e8d6db0f209f",
+  "captured_at": "2026-09-17T12:43:12.704999+00:00",
+  "correctness": {
+    "cases": [
+      {
+        "case_id": "attention-w8192-fp16-seed20260917",
+        "finite": true,
+        "max_absolute_error": 1.1920928955078125e-07,
+        "runtime_ok": true,
+        "seed": 20260917
+      },
+      {
+        "case_id": "attention-w8192-fp16-seed20260918",
+        "finite": true,
+        "max_absolute_error": 1.1920928955078125e-07,
+        "runtime_ok": true,
+        "seed": 20260918
+      },
+      {
+        "case_id": "attention-w8192-fp16-seed20260919",
+        "finite": true,
+        "max_absolute_error": 1.1920928955078125e-07,
+        "runtime_ok": true,
+        "seed": 20260919
+      }
+    ],
+    "oracle": "torch_fp32_reference",
+    "passed": true
+  },
+  "decision": "promote",
+  "environment": {
+    "architecture": "gfx1151",
+    "python_abi": "cp312",
+    "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+    "rocm_abi": "7.15",
+    "wavefront_size": 32
+  },
+  "evidence_id": "m5-20260917-softmax-gfx1151-attention-w8192-fp16",
+  "guarantee_boundary": "Exact gfx1151, ROCm 7.15, cp312, PyTorch 2.14.0a0+rocm7.15.0a20260719, workload {\"contiguous\": true, \"dtype\": \"fp16\", \"requires_grad\": false, \"rows\": 512, \"width\": 8192}, contiguous inference only.",
+  "operator": "softmax",
+  "schema_version": "1.0",
+  "semantic_version": "1.0",
+  "source_evidence_hashes": {
+    "candidate_source": "da772f6e5539af28202915969aae33264d85c081c3942a5148505a9585657edf",
+    "dispatch": "d78489bff2a90b6591e60be11618eeba43d4a87aa4eb9b54d016ccdc57eba363",
+    "evaluation": "635872fd55d3bff190e8ecbb5c8de30a5f46ed7ece6e172730f7ae74cf09bbb4",
+    "manifest": "b8040e05a0eab4ecdf3e7bd018d7f5307369f97a1be7f0279ce5cf930d697cab"
+  },
+  "timing": {
+    "baseline": "torch_fp32_reference",
+    "baseline_cv": 0.0015359172636146778,
+    "baseline_median_ms": 0.30756310335139636,
+    "baseline_samples_ms": [
+      0.3096256059469636,
+      0.30869603894420505,
+      0.307996572907438,
+      0.3079972217992409,
+      0.3077372324835394,
+      0.30763787338414145,
+      0.30744298954599913,
+      0.3076304406234899,
+      0.30755784339511516,
+      0.3073638837362073,
+      0.3073746199460374,
+      0.3075683633076776,
+      0.3073968199110523,
+      0.30752860393720804,
+      0.30798957274132166,
+      0.3076936584158042,
+      0.3078386759020619,
+      0.30777740478515625,
+      0.3073340937034371,
+      0.3074641670148397,
+      0.3073974491394672,
+      0.3076464466212951,
+      0.30718146648603617,
+      0.3072962023548244,
+      0.30743595005310687,
+      0.3075845856027505,
+      0.30735344247719676,
+      0.3073942243438406,
+      0.3071574968161042,
+      0.3077095660966696
+    ],
+    "candidate_cv": 0.007842291076424543,
+    "candidate_median_ms": 0.07772906785158767,
+    "candidate_samples_ms": [
+      0.07829528002394844,
+      0.07832171253322326,
+      0.07738749513921049,
+      0.07787118498812017,
+      0.07666088871120177,
+      0.07836324652445685,
+      0.07734359662557386,
+      0.0782846470469052,
+      0.07729589816221256,
+      0.0783994763167863,
+      0.07735495714797187,
+      0.07822741184037985,
+      0.07735362986928408,
+      0.07824859914091445,
+      0.07735961737092008,
+      0.07771378448329021,
+      0.07587273096300892,
+      0.07807073396505769,
+      0.07744885474136196,
+      0.07811236135738413,
+      0.07740051721789173,
+      0.07857683516040291,
+      0.07729846423434228,
+      0.07836128018566013,
+      0.07745906987141088,
+      0.07821594808519501,
+      0.0772292786037799,
+      0.0782886583780505,
+      0.0768959792618899,
+      0.07774435121988513
+    ],
+    "confidence_interval_pct": [
+      74.56770939586593,
+      74.84243492778255
+    ],
+    "latency_reduction_pct": 74.72744064401613,
+    "stable": true
+  },
+  "workload": {
+    "contiguous": true,
+    "dtype": "fp16",
+    "requires_grad": false,
+    "rows": 512,
+    "width": 8192
+  }
+}

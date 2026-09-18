@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "keys": [
+    {
+      "key_id": "rk-release-2026-09",
+      "algorithm": "ed25519",
+      "public_key": "YV48wKLstFg49Fdv4S7fJn/x/h9bT0pDBDeVkAk1Haw=",
+      "status": "active",
+      "created_at": "2026-09-17T10:05:18.589430+00:00"
+    }
+  ]
+}

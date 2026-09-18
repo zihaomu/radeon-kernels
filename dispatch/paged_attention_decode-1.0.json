@@ -1,0 +1,960 @@
+{
+  "default_fallbacks": [
+    "torch"
+  ],
+  "entries": [
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 1,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 64,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 1,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 64,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 1,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 8,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 1,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 8,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 16,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 128,
+        "num_blocks": 2048,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 16,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 128,
+        "num_blocks": 2048,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 256,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 256,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b4-mha16-c2048-d64-p32-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b4-mha16-c2048-d64-p32-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 32,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 64,
+        "index_dtype": "int32",
+        "kv_heads": 16,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 16,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 512,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 512,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 64,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 64,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 1,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 8,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 1,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 8,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 16,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 128,
+        "num_blocks": 2048,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 16,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 128,
+        "num_blocks": 2048,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 256,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 256,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 32,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 64,
+        "index_dtype": "int32",
+        "kv_heads": 16,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 16,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 4,
+        "block_size": 32,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 64,
+        "index_dtype": "int32",
+        "kv_heads": 16,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 256,
+        "query_heads": 16,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 512,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 64,
+        "num_blocks": 512,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 64,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+        "entrypoint": "attention_wave1",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+      },
+      "workload": {
+        "batch": 8,
+        "block_size": 16,
+        "cache_layout": "block_slot_head_dim",
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int32",
+        "kv_heads": 8,
+        "max_blocks_per_sequence": 8,
+        "num_blocks": 64,
+        "query_heads": 32,
+        "requires_grad": false,
+        "scale_mode": "default"
+      }
+    }
+  ],
+  "operator": "paged_attention_decode",
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

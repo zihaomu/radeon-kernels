@@ -1,0 +1,79 @@
+{
+  "operator": "softmax",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m5-20260917-softmax-gfx1201-attention-w4096-bf16-2eefabae3e754238-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1201.so",
+          "entrypoint": "softmax",
+          "evidence_id": "m5-20260917-softmax-gfx1201-attention-w4096-bf16",
+          "format": "python_extension",
+          "operator": "softmax",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "a703eae27aae392eb1ee1a4998bbb76fcbe2277a84f05bf5fd1b43e1f5002e26",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "vligVHjIHKyupIO9IkEAy82oOW6Y5Gvk2/lxuu65N+UpJowvylFO02d/gFGjSQROl62afyB5RGAx9dMQ4zuSCA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "a703eae27aae392eb1ee1a4998bbb76fcbe2277a84f05bf5fd1b43e1f5002e26"
+      },
+      "pack_id": "rk-softmax-gfx1201-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-softmax-gfx1201-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "1fc0b5c07ed51a43effb77abf949e791f5c1926cb058df270154500b581615f3",
+      "release_size": 107911
+    },
+    {
+      "approval_id": "approval-proposal-m5-20260917-softmax-gfx1151-attention-w8192-fp16-53bbceb8c212ff34-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1151.so",
+          "entrypoint": "softmax",
+          "evidence_id": "m5-20260917-softmax-gfx1151-attention-w8192-fp16",
+          "format": "python_extension",
+          "operator": "softmax",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "ea202a78725df1b9312ebd2a0c2065ce7865e876442b555abce9e8d6db0f209f"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "b8040e05a0eab4ecdf3e7bd018d7f5307369f97a1be7f0279ce5cf930d697cab",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "rPxG/pXSQbcI42LmwW+IPpsMTzBYgFLzFpK1uHnbiTkE+OGu6ANkrRFjNAqRkzJCFempTHArDXGqlmKy3xadBA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "b8040e05a0eab4ecdf3e7bd018d7f5307369f97a1be7f0279ce5cf930d697cab"
+      },
+      "pack_id": "rk-softmax-gfx1151-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-softmax-gfx1151-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "091928c9387831684963e3736e9eb9d6a1593fe350b9087ab69d1734a71c0f56",
+      "release_size": 112938
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

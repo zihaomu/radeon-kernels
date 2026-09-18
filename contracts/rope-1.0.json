@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "operator": "rope",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "q", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["token_head_dim"], "alias": "none"},
+    {"name": "k", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["token_head_dim"], "alias": "none"},
+    {"name": "cos", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["token_dim"], "alias": "none"},
+    {"name": "sin", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["token_dim"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "q_out", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["token_head_dim"], "alias": "none"},
+    {"name": "k_out", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["token_head_dim"], "alias": "none"}
+  ],
+  "parameters": {"mode": "split_half"},
+  "capabilities": {"inference": true, "backward": true, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "fp32", "absolute_tolerance": 0.01, "relative_tolerance": 0.01, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.rope.reference.rope_reference"}
+}

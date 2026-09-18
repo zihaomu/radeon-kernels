@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16-80b8fd4924841c95-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16-80b8fd4924841c95",
+  "proposal_sha256": "d5287a2ec4dced614f08553d1bf3a79eb27e85dfeae2a0ec49df1127eca60540",
+  "reason": "reviewed correctness, timing stability, exact paged-layout scope, and artifact lineage for all 33 KV-cache proposals",
+  "reviewed_at": "2026-09-18T02:34:26.389835+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

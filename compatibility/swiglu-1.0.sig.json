@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "QhJl4hzmu2bnc1SqwZKW+ahOJJ6ZUDdekPfttiLlYzidAKovd5jICzwvCeP2kZHqHxajSPfAxXlFkAenf9geAg==",
+  "signed_file": "swiglu-1.0.json",
+  "signed_sha256": "74bb8775197d04b2ae7da754457c5573e84a13fbb940fc16b7a0f565def81061"
+}

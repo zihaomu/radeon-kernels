@@ -1,0 +1,79 @@
+{
+  "operator": "rope",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m5-20260917-rope-gfx1201-decode-d128-bf16-bbde283de3ff6db3-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1201.so",
+          "entrypoint": "rope",
+          "evidence_id": "m5-20260917-rope-gfx1201-decode-d128-bf16",
+          "format": "python_extension",
+          "operator": "rope",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "b1c4177bbe115d7f765de2bddbdd26fcd6e30a495fa583c768ea2c836452db53",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "gbihsjBu/Sdebb7TwApg/z45YVZogdAiQbCDaa5DIZSC6uunOP38eGXIcZHH0MHkBgE3ceLjvHqYzd2Th9yYAA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "b1c4177bbe115d7f765de2bddbdd26fcd6e30a495fa583c768ea2c836452db53"
+      },
+      "pack_id": "rk-rope-gfx1201-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-rope-gfx1201-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "a05d9db67d85803d16a25d858c9f5d920f4102f425055d00622956324f969fa6",
+      "release_size": 107902
+    },
+    {
+      "approval_id": "approval-proposal-m5-20260917-rope-gfx1151-decode-d128-fp16-f5e8fda34c00e49b-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1151.so",
+          "entrypoint": "rope",
+          "evidence_id": "m5-20260917-rope-gfx1151-decode-d128-fp16",
+          "format": "python_extension",
+          "operator": "rope",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "ea202a78725df1b9312ebd2a0c2065ce7865e876442b555abce9e8d6db0f209f"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "39b2d7fc1fb1d2a8f2ba95a0af8dfec5256ed9861f785d381e374fe0b5e0d3a2",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "saEsZIQcpAhKFLUF4lQYAz6s06LgSDjncbO02h7kkHVqUyKnPp+lkftmXja9IyStekT05deqaEJ571qalfa+Bw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "39b2d7fc1fb1d2a8f2ba95a0af8dfec5256ed9861f785d381e374fe0b5e0d3a2"
+      },
+      "pack_id": "rk-rope-gfx1151-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-rope-gfx1151-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "d9279457fed20f988e041e8b1795868ca8d600af3d11a663702155bffa727a95",
+      "release_size": 112918
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

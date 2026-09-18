@@ -1,0 +1,16 @@
+schema_version: 1
+operator: swiglu
+semantic_version: "1.0"
+public_api: silu_mul
+oracle: torch_fp32_reference
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: decode-h11008, tokens: 1, hidden: 11008}
+  - {id: small-prefill-h11008, tokens: 128, hidden: 11008}
+  - {id: prefill-h11008, tokens: 1024, hidden: 11008}
+  - {id: prefill-h28672, tokens: 512, hidden: 28672}
+dtypes: [fp16, bf16]

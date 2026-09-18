@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "De1EMtpqz4EPnO51F9P1uOSVTbRzHONazmd04bkA2eB+O4gwJdFYK3FfkJjjDXu7CJjkpITlhyQFvmMUDlJRAQ==",
+  "signed_file": "softmax-1.0.json",
+  "signed_sha256": "24c6b0c1b1ae89a049b2c54a69ea091e03f350660fd5d22d6dbf067b56dc38e1"
+}

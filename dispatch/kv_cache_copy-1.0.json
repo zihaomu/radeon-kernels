@@ -1,0 +1,675 @@
+{
+  "default_fallbacks": [
+    "torch"
+  ],
+  "entries": [
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 1,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 1,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_scalar",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 32,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 32,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 128,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 32,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 32,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 128,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 256,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 64,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 256,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 64,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 8,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 8,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 1,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 1,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_scalar",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_scalar",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 32,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 32,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 128,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec8",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 32,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 32,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 128,
+        "pairs": 32,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "bf16",
+        "head_dim": 256,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 64,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 256,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 64,
+        "requires_grad": false
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs8-gqa8-d128-p16-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "kv_cache_copy-gfx1201-beam-pairs8-gqa8-d128-p16-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+        "entrypoint": "copy_vec4",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+      },
+      "workload": {
+        "block_size": 16,
+        "contiguous": true,
+        "dtype": "fp16",
+        "head_dim": 128,
+        "index_dtype": "int64",
+        "kv_heads": 8,
+        "layout": "block_slot_head_dim",
+        "num_blocks": 256,
+        "pairs": 8,
+        "requires_grad": false
+      }
+    }
+  ],
+  "operator": "kv_cache_copy",
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

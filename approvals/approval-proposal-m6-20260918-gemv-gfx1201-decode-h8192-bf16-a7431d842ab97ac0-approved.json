@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-bf16-a7431d842ab97ac0-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m6-20260918-gemv-gfx1201-decode-h8192-bf16-a7431d842ab97ac0",
+  "proposal_sha256": "4658e1db8aea4124f5feed65733060785e68b6135e5531d863508af55ea8ab62",
+  "reason": "reviewed correctness, independent timing stability, exact workload scope, and artifact lineage",
+  "reviewed_at": "2026-09-18T01:58:28.829469+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

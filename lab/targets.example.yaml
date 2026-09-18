@@ -1,0 +1,27 @@
+schema_version: 1
+
+# Every entry in this list is planned by default. Omit a machine to filter it out.
+targets:
+  - id: r9700-lab
+    ssh_host: ssh-config-alias
+    expected_architecture: auto
+    remote_root: /data/example/radeon-kernels-workspace
+
+    gpu_ids: [0, 1]
+    gpus_per_job: 1
+    max_parallel_jobs: 2
+    busy_policy: wait
+    busy_timeout_seconds: 1800
+
+    container:
+      runtime: docker
+      image: registry.example.com/kernel-lab/rocm-triton@sha256:0000000000000000000000000000000000000000000000000000000000000000
+      workdir: /workspace/radeon-kernels
+      devices:
+        - /dev/kfd
+        - /dev/dri
+      security_options:
+        - seccomp=unconfined
+      mounts: []
+      environment_from_host: []
+

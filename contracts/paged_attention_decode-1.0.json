@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "operator": "paged_attention_decode",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "query", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["batch_head_dim"], "alias": "none"},
+    {"name": "key_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "none"},
+    {"name": "value_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "none"},
+    {"name": "block_tables", "dtypes": ["int32", "int64"], "rank": 2, "layouts": ["batch_logical_block"], "alias": "none"},
+    {"name": "context_lengths", "dtypes": ["int32", "int64"], "rank": 1, "layouts": ["batch"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "output", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["batch_head_dim"], "alias": "none"}
+  ],
+  "parameters": {
+    "cache_layout": "block_slot_head_dim",
+    "attention_mode": "causal_decode_single_query",
+    "query_to_kv_head": "query_head//(query_heads//kv_heads)",
+    "scale_default": "1/sqrt(head_dim)",
+    "context_precondition": "1<=context_length<=max_blocks_per_sequence*block_size",
+    "block_table_precondition": "referenced_physical_blocks_in_range"
+  },
+  "capabilities": {"inference": true, "backward": false, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "fp32", "absolute_tolerance": 0.03, "relative_tolerance": 0.03, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.paged_attention.reference.paged_attention_decode_reference"}
+}

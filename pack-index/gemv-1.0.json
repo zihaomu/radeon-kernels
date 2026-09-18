@@ -1,0 +1,115 @@
+{
+  "operator": "gemv",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16-381585303463e2fd-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_gemv_gfx1201-repeat2.so",
+          "entrypoint": "gemv_wave2",
+          "evidence_id": "m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16",
+          "format": "python_extension",
+          "operator": "gemv",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "bcb6d8c26c72a74e13a14ca823e67d3336a48859510735c4d944004dc1c11616",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "vKw7NqBHIZFyNjI3JZOPUG7IwSPs7TWhSARxCpuhq6/9JIFPB63SeWaBRR/jAE0XDGF9FFPNZgQEfrpMJd6sDg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "bcb6d8c26c72a74e13a14ca823e67d3336a48859510735c4d944004dc1c11616"
+      },
+      "pack_id": "rk-gemv-gfx1201-m6-20260918-decode-ffn-down-h4096-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-gemv-gfx1201-m6-20260918-decode-ffn-down-h4096-bf16-0.1.0.tar.gz",
+      "release_sha256": "adb37f097707f722b8e68c1d095a18215245b2a370106553ae6569042c85b369",
+      "release_size": 107409
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-bf16-a7431d842ab97ac0-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_gemv_gfx1201-repeat2.so",
+          "entrypoint": "gemv_wave1",
+          "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-bf16",
+          "format": "python_extension",
+          "operator": "gemv",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "8e2daaadb615c6c4dad0db8e291887d9a68133b8c389abe7e170012b3a5deba3",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "bjnRQw8ZHDWffRRkhG9S4eicS4t2iEWpJBeEc5YI85Q0dzwk6ZH/czpvZxGtrGxpufRUNz7AIGEWJG1bgW87CA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "8e2daaadb615c6c4dad0db8e291887d9a68133b8c389abe7e170012b3a5deba3"
+      },
+      "pack_id": "rk-gemv-gfx1201-m6-20260918-decode-h8192-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-gemv-gfx1201-m6-20260918-decode-h8192-bf16-0.1.0.tar.gz",
+      "release_sha256": "948d0965948e63d09df9cb2f5256052a687cd791330f977b550d36c3b2d6f647",
+      "release_size": 107391
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-fp16-0e7e40c9f0a239e6-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_gemv_gfx1201-repeat2.so",
+          "entrypoint": "gemv_wave1",
+          "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-fp16",
+          "format": "python_extension",
+          "operator": "gemv",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "d88a3e07c4a1efceba88e05a1f82ca593667eb0ca573fb730ddd84bcde4fead9",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "bXldRqHn2qMRJ2+Lj7pqM2PvF4G4GFzUKff9327XgwquyzObFeZ741XuSHto1vtivFC6hN0kp0p4DMJO95+IBw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "d88a3e07c4a1efceba88e05a1f82ca593667eb0ca573fb730ddd84bcde4fead9"
+      },
+      "pack_id": "rk-gemv-gfx1201-m6-20260918-decode-h8192-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-gemv-gfx1201-m6-20260918-decode-h8192-fp16-0.1.0.tar.gz",
+      "release_sha256": "f751f27d36cfea49490ffa64747d27a7e6c567b6c5d7b6eadca8b82c4d386bbb",
+      "release_size": 107393
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

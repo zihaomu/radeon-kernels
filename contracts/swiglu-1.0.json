@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "operator": "swiglu",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "gate", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"},
+    {"name": "up", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "output", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"}
+  ],
+  "capabilities": {"inference": true, "backward": true, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "fp32", "absolute_tolerance": 0.01, "relative_tolerance": 0.01, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.swiglu.reference.silu_mul_reference"}
+}

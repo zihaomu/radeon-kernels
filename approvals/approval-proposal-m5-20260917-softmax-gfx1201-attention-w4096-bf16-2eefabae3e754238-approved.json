@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-softmax-gfx1201-attention-w4096-bf16-2eefabae3e754238-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m5-20260917-softmax-gfx1201-attention-w4096-bf16-2eefabae3e754238",
+  "proposal_sha256": "2b9c26b55cb89c09d86d631e625e378697c6ca4ac00a7c72a2cd894b810de643",
+  "reason": "Milestone 5 completion explicitly requested; all deterministic gates and sanitized evidence passed.",
+  "reviewed_at": "2026-09-17T12:50:47.608291+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

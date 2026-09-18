@@ -1,0 +1,137 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-bf16-a7431d842ab97ac0-approved",
+  "candidate_content_hash": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2",
+  "captured_at": "2026-09-18T01:33:58.493896+00:00",
+  "correctness": {
+    "cases": [
+      {
+        "case_id": "decode-h8192-bf16-seed20260917",
+        "finite": true,
+        "max_absolute_error": 0.001953125,
+        "runtime_ok": true,
+        "seed": 20260917
+      },
+      {
+        "case_id": "decode-h8192-bf16-seed20260918",
+        "finite": true,
+        "max_absolute_error": 0.00390625,
+        "runtime_ok": true,
+        "seed": 20260918
+      },
+      {
+        "case_id": "decode-h8192-bf16-seed20260919",
+        "finite": true,
+        "max_absolute_error": 0.001953125,
+        "runtime_ok": true,
+        "seed": 20260919
+      }
+    ],
+    "oracle": "torch_fp32_reference",
+    "passed": true
+  },
+  "decision": "promote",
+  "environment": {
+    "architecture": "gfx1201",
+    "python_abi": "cp312",
+    "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+    "rocm_abi": "7.2",
+    "wavefront_size": 32
+  },
+  "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-bf16",
+  "guarantee_boundary": "Exact gfx1201, ROCm 7.2, cp312, PyTorch 2.11.0+rocm7.2.4.git5fbd98f3, workload {\"contiguous\": true, \"dtype\": \"bf16\", \"k\": 8192, \"m\": 1, \"n\": 8192, \"requires_grad\": false, \"weight_layout\": \"nk\"}, contiguous inference only.",
+  "operator": "gemv",
+  "schema_version": "1.0",
+  "semantic_version": "1.0",
+  "source_evidence_hashes": {
+    "candidate_source": "45299ccc2f9fd5b0953e584635673278808a4f1f52b7d992ba81eee3a7f9ba7f",
+    "dispatch": "88ebed631076d10df754f8c997638e0a2acfd472648e8765dada21d0b78fa784",
+    "evaluation": "09e5062d06d9281424dda8fb118eb4b490b004240ab75d5153b05478f6da51e7",
+    "manifest": "8e2daaadb615c6c4dad0db8e291887d9a68133b8c389abe7e170012b3a5deba3"
+  },
+  "timing": {
+    "baseline": "torch_mm",
+    "baseline_cv": 0.005524505820147456,
+    "baseline_median_ms": 0.32857551574707033,
+    "baseline_samples_ms": [
+      0.332187557220459,
+      0.3293776035308838,
+      0.32762014865875244,
+      0.3287006139755249,
+      0.3284911155700684,
+      0.32975335121154786,
+      0.3291656255722046,
+      0.32732243537902833,
+      0.32759990692138674,
+      0.32942287921905516,
+      0.32885313034057617,
+      0.3280496597290039,
+      0.3320417881011963,
+      0.3282938957214355,
+      0.3284263849258423,
+      0.328584885597229,
+      0.32992537021636964,
+      0.32672767639160155,
+      0.3317257881164551,
+      0.3277741432189941,
+      0.33031835556030276,
+      0.32860190868377687,
+      0.32856614589691163,
+      0.3342862606048584,
+      0.3273559331893921,
+      0.3291283845901489,
+      0.32639570236206056,
+      0.3256159782409668,
+      0.3271561861038208,
+      0.3279526472091675
+    ],
+    "candidate_cv": 0.0013365744021660649,
+    "candidate_median_ms": 0.25114190578460693,
+    "candidate_samples_ms": [
+      0.2509714365005493,
+      0.251263427734375,
+      0.2514194011688232,
+      0.2511244058609009,
+      0.2505444288253784,
+      0.2510754346847534,
+      0.2511904239654541,
+      0.25064041614532473,
+      0.2514764070510864,
+      0.25115940570831297,
+      0.25079641342163084,
+      0.2506434202194214,
+      0.2505594491958618,
+      0.2513404130935669,
+      0.25187039375305176,
+      0.2513953924179077,
+      0.2511014223098755,
+      0.2516593933105469,
+      0.2515624284744263,
+      0.2509704351425171,
+      0.2516223907470703,
+      0.251194429397583,
+      0.2514414072036743,
+      0.2508434295654297,
+      0.25101542472839355,
+      0.25101442337036134,
+      0.2507904291152954,
+      0.2513293981552124,
+      0.250978422164917,
+      0.2514344215393066
+    ],
+    "confidence_interval_pct": [
+      23.423664839214908,
+      23.70797540039693
+    ],
+    "latency_reduction_pct": 23.56645770954826,
+    "stable": true
+  },
+  "workload": {
+    "contiguous": true,
+    "dtype": "bf16",
+    "k": 8192,
+    "m": 1,
+    "n": 8192,
+    "requires_grad": false,
+    "weight_layout": "nk"
+  }
+}

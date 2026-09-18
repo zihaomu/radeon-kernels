@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "o25Z3wN+HIEGOUy00pJdIiDnNSwDq8C+oXeL7SCpL71wnpLli815gTsHgmIkT4bsyodhfziaaxUGUKLF60XNAg==",
+  "signed_file": "approval-proposal-m5-20260917-rms_norm-gfx1201-small-prefill-h4096-fp16-d01aec884ae3c156-approved.json",
+  "signed_sha256": "6b031d220e3e6c160b8ca50be6ec54f45051b13551971da52444dceb0119cbd5"
+}

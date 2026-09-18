@@ -1,0 +1,19 @@
+schema_version: 1
+operator: kv_cache_append
+semantic_version: "1.0"
+oracle: torch_index_copy
+baseline: torch_index_copy
+layout: block_slot_head_dim
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: decode-t1-gqa8-d128-p16, tokens: 1, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: decode-t8-gqa8-d128-p16, tokens: 8, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: decode-t32-gqa8-d128-p16, tokens: 32, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: prefill-t128-gqa8-d128-p16, tokens: 128, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 128}
+  - {id: decode-t32-gqa8-d256-p16, tokens: 32, num_blocks: 256, block_size: 16, kv_heads: 8, head_dim: 256}
+  - {id: prefill-t128-mha32-d128-p32, tokens: 128, num_blocks: 128, block_size: 32, kv_heads: 32, head_dim: 128}
+dtypes: [fp16, bf16]

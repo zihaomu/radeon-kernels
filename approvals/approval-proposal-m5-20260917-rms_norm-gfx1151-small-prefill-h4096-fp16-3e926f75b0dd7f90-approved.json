@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-rms_norm-gfx1151-small-prefill-h4096-fp16-3e926f75b0dd7f90-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m5-20260917-rms_norm-gfx1151-small-prefill-h4096-fp16-3e926f75b0dd7f90",
+  "proposal_sha256": "1eeb9e9309ee1265e0ed8fdc91df2f84c4194e1a3c32e9bb0b293d642ac3d0f7",
+  "reason": "Milestone 5 completion explicitly requested; all deterministic gates and sanitized evidence passed.",
+  "reviewed_at": "2026-09-17T12:50:47.622370+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

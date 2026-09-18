@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "bs8E93ri+baLbe4zupSsQBjWpuOHse08+wPmr3mB0MyhZg7p8MHeT2kzIVVgCNf4UrIB3DnAiy4NfVA682ujDQ==",
+  "signed_file": "gemv-1.0.json",
+  "signed_sha256": "a8b15c41d347e03e57711fd250453e2c2ec9ed1f6604c7b5a9ebc5dd8dc9d2c6"
+}

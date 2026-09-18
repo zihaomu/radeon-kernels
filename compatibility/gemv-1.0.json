@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16-381585303463e2fd-approved",
+      "architecture": "gfx1201",
+      "evidence_id": "m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16",
+      "id": "gemv-gfx1201-m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16",
+      "provider": "native",
+      "python_abi": "cp312",
+      "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+      "reason": "all deterministic promotion gates passed",
+      "rocm_abi": "7.2",
+      "status": "supported",
+      "wavefront_size": 32
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-bf16-a7431d842ab97ac0-approved",
+      "architecture": "gfx1201",
+      "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-bf16",
+      "id": "gemv-gfx1201-m6-20260918-gemv-gfx1201-decode-h8192-bf16",
+      "provider": "native",
+      "python_abi": "cp312",
+      "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+      "reason": "all deterministic promotion gates passed",
+      "rocm_abi": "7.2",
+      "status": "supported",
+      "wavefront_size": 32
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-fp16-0e7e40c9f0a239e6-approved",
+      "architecture": "gfx1201",
+      "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-fp16",
+      "id": "gemv-gfx1201-m6-20260918-gemv-gfx1201-decode-h8192-fp16",
+      "provider": "native",
+      "python_abi": "cp312",
+      "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+      "reason": "all deterministic promotion gates passed",
+      "rocm_abi": "7.2",
+      "status": "supported",
+      "wavefront_size": 32
+    }
+  ],
+  "schema_version": "1.0"
+}

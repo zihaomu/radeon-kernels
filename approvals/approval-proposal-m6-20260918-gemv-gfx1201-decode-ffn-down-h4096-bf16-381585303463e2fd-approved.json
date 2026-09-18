@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16-381585303463e2fd-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16-381585303463e2fd",
+  "proposal_sha256": "84a0328366d457d5697ac2958f99540439de6817f1180869c44182fa12655fee",
+  "reason": "reviewed correctness, independent timing stability, exact workload scope, and artifact lineage",
+  "reviewed_at": "2026-09-18T01:58:28.829626+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

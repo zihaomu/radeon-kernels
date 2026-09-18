@@ -1,0 +1,137 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-gemv-gfx1201-decode-h8192-fp16-0e7e40c9f0a239e6-approved",
+  "candidate_content_hash": "768491638fc4de0ba7827e1841de9ab918bdec5107a98778c9d13a67db789af2",
+  "captured_at": "2026-09-18T01:33:58.493896+00:00",
+  "correctness": {
+    "cases": [
+      {
+        "case_id": "decode-h8192-fp16-seed20260917",
+        "finite": true,
+        "max_absolute_error": 0.00048828125,
+        "runtime_ok": true,
+        "seed": 20260917
+      },
+      {
+        "case_id": "decode-h8192-fp16-seed20260918",
+        "finite": true,
+        "max_absolute_error": 0.00048828125,
+        "runtime_ok": true,
+        "seed": 20260918
+      },
+      {
+        "case_id": "decode-h8192-fp16-seed20260919",
+        "finite": true,
+        "max_absolute_error": 0.0009765625,
+        "runtime_ok": true,
+        "seed": 20260919
+      }
+    ],
+    "oracle": "torch_fp32_reference",
+    "passed": true
+  },
+  "decision": "promote",
+  "environment": {
+    "architecture": "gfx1201",
+    "python_abi": "cp312",
+    "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+    "rocm_abi": "7.2",
+    "wavefront_size": 32
+  },
+  "evidence_id": "m6-20260918-gemv-gfx1201-decode-h8192-fp16",
+  "guarantee_boundary": "Exact gfx1201, ROCm 7.2, cp312, PyTorch 2.11.0+rocm7.2.4.git5fbd98f3, workload {\"contiguous\": true, \"dtype\": \"fp16\", \"k\": 8192, \"m\": 1, \"n\": 8192, \"requires_grad\": false, \"weight_layout\": \"nk\"}, contiguous inference only.",
+  "operator": "gemv",
+  "schema_version": "1.0",
+  "semantic_version": "1.0",
+  "source_evidence_hashes": {
+    "candidate_source": "45299ccc2f9fd5b0953e584635673278808a4f1f52b7d992ba81eee3a7f9ba7f",
+    "dispatch": "88ebed631076d10df754f8c997638e0a2acfd472648e8765dada21d0b78fa784",
+    "evaluation": "09e5062d06d9281424dda8fb118eb4b490b004240ab75d5153b05478f6da51e7",
+    "manifest": "d88a3e07c4a1efceba88e05a1f82ca593667eb0ca573fb730ddd84bcde4fead9"
+  },
+  "timing": {
+    "baseline": "torch_mm",
+    "baseline_cv": 0.004629501579848476,
+    "baseline_median_ms": 0.3274817699339332,
+    "baseline_samples_ms": [
+      0.3270416492369117,
+      0.32751532298762626,
+      0.32899965891023963,
+      0.32764602288967226,
+      0.3274482168802401,
+      0.32757752116133526,
+      0.32853991810868427,
+      0.3271306898535752,
+      0.3260204733871832,
+      0.3271394590052163,
+      0.328840162695908,
+      0.3320337388573623,
+      0.3251151108160252,
+      0.3265999817266697,
+      0.3290101493277201,
+      0.3272101937270746,
+      0.3277655345637624,
+      0.32736459592493566,
+      0.3304657354587462,
+      0.32688019915324884,
+      0.32888477604563643,
+      0.32841942949992853,
+      0.32885749165604755,
+      0.32981453872308497,
+      0.32720412277593847,
+      0.3271784898711414,
+      0.3257639117357207,
+      0.32739653238436073,
+      0.3249960876092678,
+      0.33003109257395674
+    ],
+    "candidate_cv": 0.0014108807730309975,
+    "candidate_median_ms": 0.2504436795304461,
+    "candidate_samples_ms": [
+      0.2502997561198909,
+      0.250419779521663,
+      0.250995356862138,
+      0.25061537579792303,
+      0.24996320212759623,
+      0.25055731796636815,
+      0.2505192640351086,
+      0.2500236790354659,
+      0.25042173339099416,
+      0.250451971844929,
+      0.24990465582870855,
+      0.24964516337324932,
+      0.25015442545821026,
+      0.2507914566412205,
+      0.2506978104754192,
+      0.2500548944240663,
+      0.25031147933587794,
+      0.25115927254281395,
+      0.25074170275432306,
+      0.25047048708287684,
+      0.2506236797425805,
+      0.25061681793957225,
+      0.25083244137647676,
+      0.2504353872159632,
+      0.24990563276337413,
+      0.2502119715620832,
+      0.25047341788687355,
+      0.25041489484833507,
+      0.24977877081894292,
+      0.2506451490448742
+    ],
+    "confidence_interval_pct": [
+      23.454133970245618,
+      23.747337152129965
+    ],
+    "latency_reduction_pct": 23.52439050852476,
+    "stable": true
+  },
+  "workload": {
+    "contiguous": true,
+    "dtype": "fp16",
+    "k": 8192,
+    "m": 1,
+    "n": 8192,
+    "requires_grad": false,
+    "weight_layout": "nk"
+  }
+}

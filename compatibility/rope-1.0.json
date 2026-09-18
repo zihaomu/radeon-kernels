@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "approval_id": "approval-proposal-m5-20260917-rope-gfx1201-decode-d128-bf16-bbde283de3ff6db3-approved",
+      "architecture": "gfx1201",
+      "evidence_id": "m5-20260917-rope-gfx1201-decode-d128-bf16",
+      "id": "rope-gfx1201-m5-20260917-rope-gfx1201-decode-d128-bf16",
+      "provider": "native",
+      "python_abi": "cp312",
+      "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+      "reason": "all deterministic promotion gates passed",
+      "rocm_abi": "7.2",
+      "status": "supported",
+      "wavefront_size": 32
+    },
+    {
+      "approval_id": "approval-proposal-m5-20260917-rope-gfx1151-decode-d128-fp16-f5e8fda34c00e49b-approved",
+      "architecture": "gfx1151",
+      "evidence_id": "m5-20260917-rope-gfx1151-decode-d128-fp16",
+      "id": "rope-gfx1151-m5-20260917-rope-gfx1151-decode-d128-fp16",
+      "provider": "native",
+      "python_abi": "cp312",
+      "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+      "reason": "all deterministic promotion gates passed",
+      "rocm_abi": "7.15",
+      "status": "supported",
+      "wavefront_size": 32
+    }
+  ],
+  "schema_version": "1.0"
+}

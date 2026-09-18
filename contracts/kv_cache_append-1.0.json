@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "operator": "kv_cache_append",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "key", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["token_head_dim"], "alias": "none"},
+    {"name": "value", "dtypes": ["fp16", "bf16"], "rank": 3, "layouts": ["token_head_dim"], "alias": "none"},
+    {"name": "key_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "output"},
+    {"name": "value_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "output"},
+    {"name": "slot_mapping", "dtypes": ["int32", "int64"], "rank": 1, "layouts": ["token"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "key_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "input"},
+    {"name": "value_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "input"}
+  ],
+  "parameters": {
+    "layout": "block_slot_head_dim",
+    "slot_addressing": "block=slot//block_size,offset=slot%block_size",
+    "slot_precondition": "in_range_and_unique"
+  },
+  "capabilities": {"inference": true, "backward": false, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "none", "absolute_tolerance": 0, "relative_tolerance": 0, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.kv_cache.reference.kv_cache_append_reference"}
+}

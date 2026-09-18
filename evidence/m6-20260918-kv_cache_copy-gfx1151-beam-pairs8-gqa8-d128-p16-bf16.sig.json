@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "K+GYWMfFRNSLfA1xgfXFYrN7VCoevNyOzD89MFabnWUtv7fP4injyi/5+U/Rnbn8A6b2T2dHs+3zHkRVMTb8Bw==",
+  "signed_file": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-bf16.json",
+  "signed_sha256": "ce0851aa3c15ae88e5f9dc75a3e060b07b2e39cc4613bee1cb626e585b5be2fa"
+}

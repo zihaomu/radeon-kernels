@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-bf16-d1952d2fcef16e85-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-bf16-d1952d2fcef16e85",
+  "proposal_sha256": "3da9c760b2f90ff06eb4cda720155b76c47e3214f48b60cd7275920a54b78572",
+  "reason": "User approved all 25 Paged Attention Decode proposals after reviewing dual-architecture retest evidence.",
+  "reviewed_at": "2026-09-18T03:26:40.725104+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

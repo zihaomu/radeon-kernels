@@ -1,0 +1,15 @@
+schema_version: 1
+operator: add_rms_norm
+semantic_version: "1.0"
+oracle: torch_fp32_reference
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: decode-h4096, tokens: 1, hidden: 4096, eps: 0.000001}
+  - {id: small-prefill-h4096, tokens: 128, hidden: 4096, eps: 0.000001}
+  - {id: prefill-h4096, tokens: 2048, hidden: 4096, eps: 0.000001}
+  - {id: prefill-h8192, tokens: 1024, hidden: 8192, eps: 0.000001}
+dtypes: [fp16, bf16]

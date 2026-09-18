@@ -1,0 +1,907 @@
+{
+  "operator": "paged_attention_decode",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-bf16-75232d53842e4f60-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "b81a7762e8e2d6febb5090123581c9125f11562e83284d02614c1517a5c2341b",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "VNpsNg73+OWcNlxF5mMN6oi99Tbl936Q/MYLp/oY7sc6tQHp8hQW/94Zi2Rh+zrXXBrjyd2ghGxD0j27eRw/Dg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "b81a7762e8e2d6febb5090123581c9125f11562e83284d02614c1517a5c2341b"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c1024-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c1024-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "6bf60abdc79eaa2b485386de02f65d6ab48d93b88fb4573f26092b63c6085ffa",
+      "release_size": 144044
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-fp16-f7bf63c81cba1644-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c1024-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "d9f61ae7a8ead45e8a17b0355dd1f2db3a79497d2e999e2589c2ea92ea570290",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "HKzPRxuvW+Tr3lzgZoLxgaETLHBMuLUNV4MfkF5rYCiOXIRwxFyjmOwmtY2r7wi7gtg9WBf4DXTDM2GDNzFBAA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "d9f61ae7a8ead45e8a17b0355dd1f2db3a79497d2e999e2589c2ea92ea570290"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c1024-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c1024-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "9a9663bfb85d6f95584962954fb1db5d54973714b09f0c0ee45fdc4beac3ac5d",
+      "release_size": 144046
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-bf16-f42bca30c5b05190-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave4",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "2440cdf707ef2ad659654c53dfcfcd642fbe9dd58154e7a5feb245b195ed70fe",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "cWIWrcMp4AZABSExiI2hVmLu66rBVwb+U1dgNa0ZJLaccnctKYWvpbVYiPLBHz4q0f05Lmc/vmRosk1pzj/TAw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "2440cdf707ef2ad659654c53dfcfcd642fbe9dd58154e7a5feb245b195ed70fe"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c128-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c128-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "ebc297d9940df1f7a0f7fe6c3de6b60a707e5938a4694b6090e91dc78adee6c3",
+      "release_size": 144041
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-fp16-f2118a2c8a5c91e2-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave8",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b1-gqa32x8-c128-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "d3ca4ee99112cb00ab0bf1130526dbbad677378a0dc7463d793361108e3efd88",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "Fw4PWcQZmO6PTD+cMZDeFMcVu4F10vVKURY+LTUqjFoqVVKSTx4S/vAQ4kiqVXW2updNE6l+VXTWhD3in5b5Bw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "d3ca4ee99112cb00ab0bf1130526dbbad677378a0dc7463d793361108e3efd88"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c128-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b1-gqa32x8-c128-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "5791895519e91e47ba427d52a5633a76f741ac3429580389815c1765f8d0cf04",
+      "release_size": 144037
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-bf16-d1952d2fcef16e85-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "3707a23a4877a4cb6384710480ef48c2f865ff623bc5c483cf4546cb3a39982f",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "jTJbLXKlAg6GpIrWWVEft3eSvN101/xKLE0UQWMnnKAZmURrD4lMnQv7UipENLStCW4LE7CJ7bw+O+YlI38oDQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "3707a23a4877a4cb6384710480ef48c2f865ff623bc5c483cf4546cb3a39982f"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b16-gqa32x8-c2048-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b16-gqa32x8-c2048-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "3fd363b646dc071dc11476462fd758f7bebf634ef85eaa0a30c5401ce964a274",
+      "release_size": 144049
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-fp16-45425b1df0ad1f09-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b16-gqa32x8-c2048-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "13be78868343c975a72efb316462b84c4603e0fbc1d847f678c5845ebd015fef",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "rRSveB1FN1VxnOnqCKihMEi0m3CiNRN0rWEKRP4cOCU5M3swIvRtjik8+KNCwhgQg9zEVH4CEkwkc7wlSzTZAg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "13be78868343c975a72efb316462b84c4603e0fbc1d847f678c5845ebd015fef"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b16-gqa32x8-c2048-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b16-gqa32x8-c2048-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "8569ef7f2e8e5b461ad4f8e443109f0dc7372b141dfb13d18c28698b6f7bbc89",
+      "release_size": 144045
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-bf16-71553dedfe9af02d-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "2dd3e0dfd2d8f1a8129fbc89c774532aa50c2ffb9ad5b090359323cd9d2f97a1",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "y4jL0TQENR1RRBZ3mWQBXH9Qo2o8JiOOZ5xk0fnungB5YDIdhYXHmBFguOTtcaCD2Ce1zWz3HdWRszzCuzL7Dw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "2dd3e0dfd2d8f1a8129fbc89c774532aa50c2ffb9ad5b090359323cd9d2f97a1"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b4-gqa32x8-c1024-d256-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b4-gqa32x8-c1024-d256-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "b6a1af48bd566071784b51df8eeb87ab2c68a27c5ca0be08d84ae388311ff619",
+      "release_size": 144044
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-fp16-697559ec2749cdc8-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave4",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b4-gqa32x8-c1024-d256-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "64daf344981879ce868fac55f0c3c8c937e57492c65916a7c4af415128d647f3",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "i8juqEQA930tSsqoBmYVCjE79Bh0xDFEPFxz1LreV04x4L5MTYMw/+PWYRvLP4j6VyyRBpvc7nP7GZNdjk44DA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "64daf344981879ce868fac55f0c3c8c937e57492c65916a7c4af415128d647f3"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b4-gqa32x8-c1024-d256-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b4-gqa32x8-c1024-d256-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "586c5cc8e2a192e7362a9627868b287075f2a1ebddde66c8e6f9b1ed0ce6e8e6",
+      "release_size": 144043
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b4-mha16-c2048-d64-p32-bf16-0fd049ceb1cdd12f-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave4",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b4-mha16-c2048-d64-p32-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "cca9e88c11ce77c5d98ab439865b57d74594f3d58b8db29a1fd5ad3bfd490b99",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "d+pVImdUQ2IEuiYVUB1ABA+BYyykPUdo/AqvRdw/ACabz4w4WmJfAnkFpkz+DZYZzyfvFu/Hs/beHfqIiBO8AA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "cca9e88c11ce77c5d98ab439865b57d74594f3d58b8db29a1fd5ad3bfd490b99"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b4-mha16-c2048-d64-p32-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b4-mha16-c2048-d64-p32-bf16-0.1.0.tar.gz",
+      "release_sha256": "6bcb04b3ed2178fa90469be19d807f005c6f7409439fa80743c352d97ac52084",
+      "release_size": 144042
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-bf16-9b21afede0814902-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "abfe37c15385c9e55519a0c05cc033680c124c3b4ff2077c120534fb7aad1586",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "SwGjhUJT7awQkdvTdgjjGvGqZjqWhGPCw4pVfVvFnEwCmUdsowaVmPkYGacpIgtb9DsomDjx9gddVhDwqVr4CA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "abfe37c15385c9e55519a0c05cc033680c124c3b4ff2077c120534fb7aad1586"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c1024-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c1024-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "c3f619e85776612170614ea908f3df7f4a61021e5d6a4ff3c9746c536d4b7ceb",
+      "release_size": 144043
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-fp16-9fcd5f6f5d1dc8e7-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c1024-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "36ff45a5b93b7115552273595513508aa9dde575e64ed63dabdcd27aa6b084d4",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "nCBE4M8hpyXyZkOtDbTk4vMxwAwWqs86T6WohpfdDOVxmca7r4H0/xSKfJZTaRb2Fj3PL3Ab126RrHCT6KxSAg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "36ff45a5b93b7115552273595513508aa9dde575e64ed63dabdcd27aa6b084d4"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c1024-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c1024-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "005ff2775ddb69d66da6d0b42db647552a1802bcce92c3c780ca871c18e9d2ab",
+      "release_size": 144046
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-bf16-523127fe04f31cb6-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "dd3f69e6475db2f8bcf490a6dedac9ff8fc88b7083921e36dc83372c23138096",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "o8yjLRhpjCmOPCnN8PF6oZEMk266X+LvoCLoV3hAI4YtlQF6oIxI90YMWxsXT7CvgSUwk40GUopnhu2YUjTsBw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "dd3f69e6475db2f8bcf490a6dedac9ff8fc88b7083921e36dc83372c23138096"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c128-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c128-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "19f650fe2f164e94998471fdaca94710608e87eec70d0a09bc28a6aeecb8c7d9",
+      "release_size": 144043
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-fp16-e34ec77489519a2c-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1151-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1151-b8-gqa32x8-c128-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "d768014f7238080b137aabeb6a0f29be0f899af62751fbd66821014986d2534d"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "4f4dab1dee0affef3ea2a39eb72b56a115d4cc430fc6d1fbcda4a7b3e9de4c29",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "3eYPR9cshPNHZzU3qyMRFZqZzU4q+pY8ocffoXaP+cQhaFEsToKYBaifDEkIFz+l8Hyr60S+zdsic7vwqFIbBg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "4f4dab1dee0affef3ea2a39eb72b56a115d4cc430fc6d1fbcda4a7b3e9de4c29"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c128-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1151-m6-20260918-b8-gqa32x8-c128-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "0d865f5e33170e54f3325788719abd70b5eed66f22c5e35571a723a38c61b0a9",
+      "release_size": 144036
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-bf16-3b9165d37c22d4c4-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "90f54d43cd6184d863557186354505f391e003fc1bcd30f0e90dfa04e88215da",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "AAWbQ1ey9T7aAZCU4/bHi7Lm8xs1P5cbpjfwYelQXKjrt7a0oezKrPrAeQQ+Rk9zwq5793ko2l5WqcyY8r0GCw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "90f54d43cd6184d863557186354505f391e003fc1bcd30f0e90dfa04e88215da"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b1-gqa32x8-c128-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b1-gqa32x8-c128-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "24b274857cd21faec66e3f57c9de780156ec4c596ba43c58143ccfb48588e247",
+      "release_size": 133520
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-fp16-af2c868a2445d254-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b1-gqa32x8-c128-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "415f37842705db67493608db61ac49f35f7b2d0dd2ec9501be84bb1dfb263a0a",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "126uDnToQbO5YlOc+xI+caB4MWJQjeRBulWMJQuQfRj3DcebcnpI/LL5aAbBWV0xDtqvl5RCK3CgYhe/x8O1Bw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "415f37842705db67493608db61ac49f35f7b2d0dd2ec9501be84bb1dfb263a0a"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b1-gqa32x8-c128-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b1-gqa32x8-c128-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "a7af20908c99e2e1ea68c394bd5d3ce32fbcc737fb86eb5429a4a144f2009579",
+      "release_size": 133520
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-bf16-2b057def36450a0d-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "4b4d18e05a872f6b941fde6f877bb692f817de510967cacfd0e48365913f9bcf",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "EWJudS4bSDU0VAOJ4TE73apm5CiKXW5XA393LIes4EPoxc+AeNajXPzVo/Qq3sgSICGZpOjBi9fSP0UgQLFSDQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "4b4d18e05a872f6b941fde6f877bb692f817de510967cacfd0e48365913f9bcf"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b16-gqa32x8-c2048-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b16-gqa32x8-c2048-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "78c6529f8ef25a5fcd518e30efae2645abd7a37b6a20a996e70d2dcd710302b8",
+      "release_size": 133528
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-fp16-f1d290d896cc7318-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b16-gqa32x8-c2048-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "f468aa087f34399cd6e22ebe5616acdcbac532984c33a6c3eeb3c974727fc7b2",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "b7gwMyq64Z1kYNQH4UycykkgE1RxnDhexA0pWteopDFiyzuuiLoSrxEqQlzqedh/2WHqvEv1vhSd/VSVofOBBg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "f468aa087f34399cd6e22ebe5616acdcbac532984c33a6c3eeb3c974727fc7b2"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b16-gqa32x8-c2048-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b16-gqa32x8-c2048-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "497def85a4e3ece4ca000a0f313f87eee2084473ed3ad0d76baa6fc82a118ced",
+      "release_size": 133525
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-bf16-167e35482a4d2526-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "a38878ead5dcd2e7a904b3004344339e3cffdffcf7c43ab5d29b0eb87a11b019",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "qAxWYDXGXzwGZl+jOVde6I+FRdGx66++HUOuy16Aj6OrONTCqtNBLmwCUM+MawDiPuEJkO+o4n4ASZB83jOsDw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "a38878ead5dcd2e7a904b3004344339e3cffdffcf7c43ab5d29b0eb87a11b019"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-gqa32x8-c1024-d256-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-gqa32x8-c1024-d256-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "898630470bf6c4a564aca180f00827c7348f942e084ab1e4fe40f2e4ac522cc0",
+      "release_size": 133528
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-fp16-94a46962eb0989ab-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-gqa32x8-c1024-d256-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "d0cacc78ad9206f5053d875ab7876a1b48833986036c6d8bba374ad8b96c20f3",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "7FsMLLbJb6hDtZtfDnUg3Sc8rIdfLJSiAR3cN68WKbS9ALmonB0OUTFdEsn0Mz0V9QuDZ7FL98Z+JbLAyvfaCw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "d0cacc78ad9206f5053d875ab7876a1b48833986036c6d8bba374ad8b96c20f3"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-gqa32x8-c1024-d256-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-gqa32x8-c1024-d256-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "3a1d106337eb7d70786e843103cc0f33b442c013da16e661996e5f8f0b137438",
+      "release_size": 133524
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-bf16-6ad6c27ff07e1b2b-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "96a2907daae9876d18fb3a90fbd2f78ad94859d5a5a1be48da29319ac25a174f",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "sbSudKiNIFQWLFElMGTWIgldmleVld+t7s+eUEDjd+dmXedbwhRmUXzeYK3iAR57mYjpA4InCJs9NFNXc6LdBw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "96a2907daae9876d18fb3a90fbd2f78ad94859d5a5a1be48da29319ac25a174f"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-mha16-c2048-d64-p32-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-mha16-c2048-d64-p32-bf16-0.1.0.tar.gz",
+      "release_sha256": "cb30bf57efdeca701109ebbeb60e927b0576db017e480f783a8704e46b7d9f54",
+      "release_size": 133516
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-fp16-1217a7027c0c8ca9-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b4-mha16-c2048-d64-p32-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "fc4808f6f2570f37572954854adb8178dcb321ada8b00ca1bd523780e77cd603",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "MLabS7QH60FFixMnwQm10PDY6Aw36EkxvexaLfVigM+68QU1BwfIKKtGk/243y7pGCuviXtj315h+0mU4qzUAA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "fc4808f6f2570f37572954854adb8178dcb321ada8b00ca1bd523780e77cd603"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-mha16-c2048-d64-p32-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b4-mha16-c2048-d64-p32-fp16-0.1.0.tar.gz",
+      "release_sha256": "eea3d1f876d27f487401c56ec172fb54988a61c8fd9dd43255f47c91e0a5776c",
+      "release_size": 133521
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-bf16-5c8107a4b5655a21-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "f954c098333a410ca7e5267a7922c55b99f9e38ba67f6322364d41c5c588c058",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "RKk5eRyGSCc4CI0EHL2C5IXo6ndVsOGsKxzpSlqSdsqicIJeEvBNtQI1bXBjYFznoRInuHnUZ3ToTDTBNBn5Bg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "f954c098333a410ca7e5267a7922c55b99f9e38ba67f6322364d41c5c588c058"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c1024-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c1024-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "6630b857a20e9c8328a49265d7e5e61717e8b474bcdd9367f4b89b0cf490bb17",
+      "release_size": 133522
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-fp16-6deba01dd3e9ba27-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c1024-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "75cdcd8637dc80372efb078262ed7e80ba931270ec449e610f5f8c5169b95721",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "p+xL9n2BYnX60lu/Tq7VwhIVpv3cVbK90p9GAM3bdrDLyT/LPiGIDtSab0uCa63aYxm9TQsR9ICqUlna3ZdAAg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "75cdcd8637dc80372efb078262ed7e80ba931270ec449e610f5f8c5169b95721"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c1024-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c1024-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "c2a065d47f45d170c68877c91d23ede982f1f3b9790b5dc00f416fab15765418",
+      "release_size": 133521
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-bf16-ef00e512c2973883-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "b648962c2acc1118a70b0675e96169b7e9291f593ea7bd89b350285cfcecd7d7",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "IhATngSJKEqDN6yH19BlwDysW06/FmxzntbyJFBQ8lUt5pq04EYQsAIYVDuSsf5FIuQQL/k1VPqw3npC8Bv7AA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "b648962c2acc1118a70b0675e96169b7e9291f593ea7bd89b350285cfcecd7d7"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c128-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c128-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "b46b61c41f213417ca9f014284c4352bf5d3faaee7f6bb7eb468eafdd5ac9c7a",
+      "release_size": 133521
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-fp16-529104846109d912-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_paged_attention_gfx1201-retest.so",
+          "entrypoint": "attention_wave1",
+          "evidence_id": "m6-20260918-paged_attention_decode-gfx1201-b8-gqa32x8-c128-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "paged_attention_decode",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "edcc05947b50cf88994d6a345f796a29ebdd817f8c5ce75314f6470b672a6b2c"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "a3184cac65b5ed53ba50f7b582bb10f01a2e6ece988a15cfae6eb81319ed3325",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "zLPTKo9Mfg//cTwvkL3DsCA5920ukfKxDW3kJW2rdSCAZdCF48nqOscB96d6dAD1h1L+Inllk+Qzvw6p+wzRDg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "a3184cac65b5ed53ba50f7b582bb10f01a2e6ece988a15cfae6eb81319ed3325"
+      },
+      "pack_id": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c128-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-paged-attention-decode-gfx1201-m6-20260918-b8-gqa32x8-c128-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "3b153cad53ab4986bb69c326d8e60062098aa11afad3271afce5f60acc2efb5f",
+      "release_size": 133519
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

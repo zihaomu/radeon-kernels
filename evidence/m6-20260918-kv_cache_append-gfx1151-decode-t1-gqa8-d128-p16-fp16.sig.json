@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "DPhKbKf9n33XXMj5dHkgb0SiabiJ1VZfiQawPiOKQtleSI3fGPQTkTAgvKQjDZQ0ABXofvKaN7XdGECKDjBzBQ==",
+  "signed_file": "m6-20260918-kv_cache_append-gfx1151-decode-t1-gqa8-d128-p16-fp16.json",
+  "signed_sha256": "d737a1c5205f7335c3470c40b329a62201a2d7fa044ebe4a3bee99f26176db17"
+}

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://radeon-kernels.dev/schemas/evidence.schema.json",
+  "title": "Radeon Kernels sanitized promotion evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "approval_id",
+    "operator",
+    "semantic_version",
+    "candidate_content_hash",
+    "captured_at",
+    "environment",
+    "workload",
+    "correctness",
+    "timing",
+    "source_evidence_hashes",
+    "decision",
+    "guarantee_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "evidence_id": {"$ref": "#/$defs/identifier"},
+    "approval_id": {"$ref": "#/$defs/identifier"},
+    "operator": {"$ref": "#/$defs/identifier"},
+    "semantic_version": {"$ref": "#/$defs/version"},
+    "candidate_content_hash": {"$ref": "#/$defs/sha256"},
+    "captured_at": {"type": "string", "format": "date-time"},
+    "environment": {"$ref": "#/$defs/environment"},
+    "workload": {"$ref": "#/$defs/workload"},
+    "correctness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "oracle", "cases"],
+      "properties": {
+        "passed": {"type": "boolean"},
+        "oracle": {"type": "string", "minLength": 1},
+        "cases": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["case_id", "runtime_ok", "finite", "max_absolute_error"],
+            "properties": {
+              "case_id": {"type": "string", "minLength": 1},
+              "seed": {"type": "integer"},
+              "runtime_ok": {"type": "boolean"},
+              "finite": {"type": "boolean"},
+              "guards_intact": {"type": "boolean"},
+              "cosine_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+              "max_absolute_error": {"type": "number", "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline",
+        "candidate_samples_ms",
+        "baseline_samples_ms",
+        "candidate_median_ms",
+        "baseline_median_ms",
+        "candidate_cv",
+        "baseline_cv",
+        "latency_reduction_pct",
+        "confidence_interval_pct",
+        "stable"
+      ],
+      "properties": {
+        "baseline": {"type": "string", "minLength": 1},
+        "candidate_samples_ms": {"type": "array", "minItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
+        "baseline_samples_ms": {"type": "array", "minItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
+        "candidate_median_ms": {"type": "number", "exclusiveMinimum": 0},
+        "baseline_median_ms": {"type": "number", "exclusiveMinimum": 0},
+        "candidate_cv": {"type": "number", "minimum": 0},
+        "baseline_cv": {"type": "number", "minimum": 0},
+        "latency_reduction_pct": {"type": "number"},
+        "confidence_interval_pct": {
+          "type": "array",
+          "prefixItems": [{"type": "number"}, {"type": "number"}],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "stable": {"type": "boolean"}
+      }
+    },
+    "source_evidence_hashes": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"pattern": "^[a-z][a-z0-9_.-]*$"},
+      "additionalProperties": {"$ref": "#/$defs/sha256"}
+    },
+    "decision": {"enum": ["promote", "reject", "needs_review"]},
+    "guarantee_boundary": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["architecture", "wavefront_size", "rocm_abi", "python_abi", "pytorch_version"],
+      "properties": {
+        "architecture": {"type": "string", "pattern": "^gfx[0-9a-f]+$"},
+        "wavefront_size": {"enum": [32, 64]},
+        "rocm_abi": {"$ref": "#/$defs/version"},
+        "python_abi": {"type": "string", "pattern": "^cp[0-9]{2,3}$"},
+        "pytorch_version": {"type": "string", "minLength": 1}
+      }
+    },
+    "workload": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"pattern": "^[a-z][a-z0-9_.-]*$"},
+      "additionalProperties": {"type": ["string", "number", "integer", "boolean"]}
+    }
+  }
+}

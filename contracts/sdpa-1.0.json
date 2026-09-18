@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "operator": "sdpa",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "query", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["batch_head_sequence_dim"], "alias": "none"},
+    {"name": "key", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["batch_head_sequence_dim"], "alias": "none"},
+    {"name": "value", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["batch_head_sequence_dim"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "output", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["batch_head_sequence_dim"], "alias": "none"}
+  ],
+  "parameters": {
+    "attention_modes": "causal,noncausal",
+    "sequence_relation": "query_sequence==key_sequence==value_sequence",
+    "query_to_kv_head": "query_head//(query_heads//kv_heads)",
+    "scale_default": "1/sqrt(head_dim)",
+    "mask": "none_except_causal",
+    "dropout": "unsupported"
+  },
+  "capabilities": {"inference": true, "backward": false, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "fp32", "absolute_tolerance": 0.03, "relative_tolerance": 0.03, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.sdpa.reference.sdpa_reference"}
+}

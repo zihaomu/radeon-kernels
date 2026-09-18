@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "lFSBPBVIe+xbB75ygJMlWQrh9cDjiym2lTLJBuCbEm8YpWxO6xgno0d2QnZ8euA+5O+mG/EJLXRUEYiXgER6CQ==",
+  "signed_file": "approval-proposal-m5-20260917-rope-gfx1151-decode-d128-fp16-f5e8fda34c00e49b-approved.json",
+  "signed_sha256": "86dc2d2b185608608320b37d15ef8354cd210cc872894d50f65db014bbea6f0d"
+}

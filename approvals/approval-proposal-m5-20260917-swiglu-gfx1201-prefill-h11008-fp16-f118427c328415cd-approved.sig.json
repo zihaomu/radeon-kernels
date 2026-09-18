@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "EkWlH6l9HQ89as7+KH5JqjHxcYkrZvE/XZnA9BXVLUvhiLS5kUIKx7RUsSeSOnylTAY3RHAfGQK5xA3IxDsqAw==",
+  "signed_file": "approval-proposal-m5-20260917-swiglu-gfx1201-prefill-h11008-fp16-f118427c328415cd-approved.json",
+  "signed_sha256": "f21bd57b3fad3db321f2208b5524842c1f2621660dfec3ad514d301a0bd18f19"
+}

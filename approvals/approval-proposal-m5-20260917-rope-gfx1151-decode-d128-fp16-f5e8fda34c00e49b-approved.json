@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-rope-gfx1151-decode-d128-fp16-f5e8fda34c00e49b-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m5-20260917-rope-gfx1151-decode-d128-fp16-f5e8fda34c00e49b",
+  "proposal_sha256": "4880704c6ad701856938b32a5e6506b7bcf54cb1b77d857721500776f9d5343a",
+  "reason": "Milestone 5 completion explicitly requested; all deterministic gates and sanitized evidence passed.",
+  "reviewed_at": "2026-09-17T12:50:47.657091+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

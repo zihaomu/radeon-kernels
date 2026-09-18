@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "EriKalP/JqTpEe/xAMQirwUaTlDFusAVTgxjwXSLHhtrzh7uZ6wYSH44ChPv/XmeSyAXmHM2T4Y6P4msH6c9Bw==",
+  "signed_file": "rope-1.0.json",
+  "signed_sha256": "e2e443a4fbc89adbde823d9f3257ae2b4976e544346c7de21bb7cd36620b0f56"
+}

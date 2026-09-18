@@ -1,0 +1,79 @@
+{
+  "operator": "swiglu",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m5-20260917-swiglu-gfx1201-prefill-h11008-fp16-f118427c328415cd-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1201.so",
+          "entrypoint": "silu_mul",
+          "evidence_id": "m5-20260917-swiglu-gfx1201-prefill-h11008-fp16",
+          "format": "python_extension",
+          "operator": "swiglu",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "5dcc1b9680b7cf61666b38ac26176924078d8c36a2435971dbc61407d415c21d",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "z93eDw2gvBYhnurLbto1Y2aFP1o0BcJXfQ3PpiOG7GCzHUmO+uhiQhunjwDpACcOnsFuarJNAzs+t3BQwXbPDQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "5dcc1b9680b7cf61666b38ac26176924078d8c36a2435971dbc61407d415c21d"
+      },
+      "pack_id": "rk-swiglu-gfx1201-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-swiglu-gfx1201-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "e14b068563f804a8040bccbf891562c93f798a1f45c119dba40a21f62f3cce76",
+      "release_size": 107913
+    },
+    {
+      "approval_id": "approval-proposal-m5-20260917-swiglu-gfx1151-prefill-h28672-fp16-d5eb31428fb234f3-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1151.so",
+          "entrypoint": "silu_mul",
+          "evidence_id": "m5-20260917-swiglu-gfx1151-prefill-h28672-fp16",
+          "format": "python_extension",
+          "operator": "swiglu",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "ea202a78725df1b9312ebd2a0c2065ce7865e876442b555abce9e8d6db0f209f"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "72bff3c07f6112c6c7b9e5e4d45719bdf716fbc1c53d7298b0aa9b5674a0d831",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "PT5ayt5GF90+3q9LZYvNJ5T+dptVZDJDo/5By6gQpVLZuAwXrpVm1oi+3N9+KplatHXQNSgQNeVadDhGcA+BDA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "72bff3c07f6112c6c7b9e5e4d45719bdf716fbc1c53d7298b0aa9b5674a0d831"
+      },
+      "pack_id": "rk-swiglu-gfx1151-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-swiglu-gfx1151-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "ee4126907bfb3414d26ba43f6c78175743843d0f2ee198b9cb2f4e1ec4befd75",
+      "release_size": 112943
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

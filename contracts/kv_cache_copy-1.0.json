@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "operator": "kv_cache_copy",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "key_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "output"},
+    {"name": "value_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "output"},
+    {"name": "block_mapping", "dtypes": ["int32", "int64"], "rank": 2, "layouts": ["source_destination_pair"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "key_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "input"},
+    {"name": "value_cache", "dtypes": ["fp16", "bf16"], "rank": 4, "layouts": ["block_slot_head_dim"], "alias": "input"}
+  ],
+  "parameters": {
+    "layout": "block_slot_head_dim",
+    "mapping_columns": "source_block,destination_block",
+    "copy_semantics": "source_snapshot",
+    "destination_precondition": "in_range_unique_and_disjoint_from_sources"
+  },
+  "capabilities": {"inference": true, "backward": false, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "none", "absolute_tolerance": 0, "relative_tolerance": 0, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.kv_cache.reference.kv_cache_copy_reference"}
+}

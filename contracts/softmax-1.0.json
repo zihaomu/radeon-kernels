@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "operator": "softmax",
+  "semantic_version": "1.0",
+  "inputs": [
+    {"name": "x", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"}
+  ],
+  "outputs": [
+    {"name": "output", "dtypes": ["fp16", "bf16"], "rank": 2, "layouts": ["row_major"], "alias": "none"}
+  ],
+  "capabilities": {"inference": true, "backward": true, "deterministic": true, "graph_capture": true},
+  "numerics": {"accumulation_dtype": "fp32", "absolute_tolerance": 0.002, "relative_tolerance": 0.002, "non_finite_policy": "propagate"},
+  "reference": {"provider": "torch", "entrypoint": "radeon_kernels.ops.softmax.reference.softmax_reference"}
+}

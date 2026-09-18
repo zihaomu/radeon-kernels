@@ -1,0 +1,16 @@
+schema_version: 1
+operator: softmax
+semantic_version: "1.0"
+oracle: torch_fp32_reference
+axis: -1
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: decode-w128, rows: 1, width: 128}
+  - {id: attention-w4096, rows: 128, width: 4096}
+  - {id: attention-w8192, rows: 512, width: 8192}
+  - {id: vocabulary-w65536, rows: 32, width: 65536}
+dtypes: [fp16, bf16]

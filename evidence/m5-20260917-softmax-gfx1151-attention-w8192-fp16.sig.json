@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "1sTFbo5mk26kT/QOo2ZDRBJCbeMYPsMQCUpnwc+KsMbMaHQOxtquybG49RlZjx/iZdUaQCtbgr8wQGByAB86Dg==",
+  "signed_file": "m5-20260917-softmax-gfx1151-attention-w8192-fp16.json",
+  "signed_sha256": "7a0829bb024d6359787926f7af800d78cb90d57fb56672898eba116822ec8a7c"
+}

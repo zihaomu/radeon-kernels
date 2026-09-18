@@ -1,0 +1,70 @@
+{
+  "default_fallbacks": [
+    "torch"
+  ],
+  "entries": [
+    {
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m5-20260917-softmax-gfx1151-attention-w8192-fp16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "softmax-gfx1151-attention-w8192-fp16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_llm_ops_gfx1151.so",
+        "entrypoint": "softmax",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "ea202a78725df1b9312ebd2a0c2065ce7865e876442b555abce9e8d6db0f209f"
+      },
+      "workload": {
+        "contiguous": true,
+        "dtype": "fp16",
+        "requires_grad": false,
+        "rows": 512,
+        "width": 8192
+      }
+    },
+    {
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "evidence_id": "m5-20260917-softmax-gfx1201-attention-w4096-bf16",
+      "fallbacks": [
+        "torch"
+      ],
+      "id": "softmax-gfx1201-attention-w4096-bf16",
+      "launch": {},
+      "priority": 100,
+      "winner": {
+        "artifact": "lib/radeon_kernels_llm_ops_gfx1201.so",
+        "entrypoint": "softmax",
+        "format": "python_extension",
+        "provider": "native",
+        "sha256": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271"
+      },
+      "workload": {
+        "contiguous": true,
+        "dtype": "bf16",
+        "requires_grad": false,
+        "rows": 128,
+        "width": 4096
+      }
+    }
+  ],
+  "operator": "softmax",
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

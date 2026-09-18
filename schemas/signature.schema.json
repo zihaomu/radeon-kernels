@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://radeon-kernels.dev/schemas/signature.schema.json",
+  "title": "Radeon Kernels detached Ed25519 signature",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "algorithm", "key_id", "signed_file", "signed_sha256", "signature"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "algorithm": {"const": "ed25519"},
+    "key_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "signed_file": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"},
+    "signed_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "signature": {"type": "string", "minLength": 86, "maxLength": 88}
+  }
+}

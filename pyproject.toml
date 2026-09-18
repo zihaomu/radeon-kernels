@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "radeon-kernels"
+version = "0.1.0"
+description = "Search, validate, and dispatch high-performance Radeon GPU kernels."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "cryptography>=41.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+rk = "radeon_kernels.lab.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/radeon_kernels"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"schemas" = "radeon_kernels/schemas"
+"contracts" = "radeon_kernels/contracts"
+"dispatch" = "radeon_kernels/dispatch"
+"keys" = "radeon_kernels/keys"
+"approvals" = "radeon_kernels/approvals"
+"compatibility" = "radeon_kernels/compatibility"
+"evidence" = "radeon_kernels/evidence"
+"pack-index" = "radeon_kernels/pack_index"
+
+[dependency-groups]
+dev = [
+    "jsonschema>=4.23",
+]

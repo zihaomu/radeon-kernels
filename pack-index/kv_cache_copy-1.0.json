@@ -1,0 +1,691 @@
+{
+  "operator": "kv_cache_copy",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-bf16-6030c9110c48e459-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "5fc8c288579593522d0edd6401d817d8fe57ee951ef118a5d2de141b2e9137ed",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "fssjCnHGbtAOw3jZ78eB6x2iGhM5jLbM5Z7cszQaJImts4nZ5a9/WTdDjLM0Gqw8yf8K4uPixUIQX614n9xNBQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "5fc8c288579593522d0edd6401d817d8fe57ee951ef118a5d2de141b2e9137ed"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs1-gqa8-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs1-gqa8-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "774e3b7fd71b9cee0f968bbc87adfaf2c2c34d7fbeb1e19b2773298e66288d61",
+      "release_size": 115852
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-fp16-786311b0caf3bbff-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs1-gqa8-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "4c259942eefd0e77eeec985e4bcfc584bb0f540683fdf82d1f2e32db2e69eafc",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "pONdyeepqOBeIBjW7lCKddiPtB5iEr1UrtNAiUZbXbnN1B2QP6QFTGC6/yzNNtyBT2+7cKUNK4mHQs3Ga/ZVBQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "4c259942eefd0e77eeec985e4bcfc584bb0f540683fdf82d1f2e32db2e69eafc"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs1-gqa8-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs1-gqa8-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "57fdee53bc0cbd0bd8607077985fcd1431de28dc308c5a1fd491bc069e2a8beb",
+      "release_size": 115853
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-bf16-5143cc4bb7a0b3fb-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "f550e4ce69e1079f52298e85e0bf7d545425b1c3806b2980ba605e4926015451",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "ipn2bujFG6cuW9pMZAb7PujaQa1yj9GF4W0jOrCv/TuUmXTHr/nsSTJsvmhM2kXXLvlAGLafKTpHbgFBTXfSDQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "f550e4ce69e1079f52298e85e0bf7d545425b1c3806b2980ba605e4926015451"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-gqa8-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-gqa8-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "8c4c47174de589c4f1c8d1a9c6cbde3afd70b66c5bff2a24778c59cb4067468e",
+      "release_size": 115849
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-fp16-3794d43189fdd0d6-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-gqa8-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "d4c7714201e2aa1cddc5c3594f50fad63b160d511e1cf7faf4bfdf55e4988eaa",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "o7FeCFoE26mS0RqHwfzqMDQ9aPAbyFJyhJZbDczjcpjCXuvstg9haaDJ6VFfPy6LB40xb7iunA69hZWSvpQYDg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "d4c7714201e2aa1cddc5c3594f50fad63b160d511e1cf7faf4bfdf55e4988eaa"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-gqa8-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-gqa8-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "fdc5c73283825716ef02b95de9c641f7935b6804df668e60177cab2f7131fd93",
+      "release_size": 115852
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-bf16-7e38b306d31273b1-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_scalar",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "ecf0d2ebc65994675ceca62199307b7b4bb197b225efcbd9a28dcab43e38e833",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "//CazcIujy/VyQrzigRRG5c3i1Pgm/BruBoziEfUuF2a8OnXqVt7zqdpMOS/r53ViTzRN9S92qGI1+c2iihRCA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "ecf0d2ebc65994675ceca62199307b7b4bb197b225efcbd9a28dcab43e38e833"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-mha32-d128-p32-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-mha32-d128-p32-bf16-0.1.0.tar.gz",
+      "release_sha256": "a6642d68186c1770b8f5f0a4a83a0c6ab1ee2b4b44c169f2dac57e7525c048d1",
+      "release_size": 115849
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-fp16-f12c1399f9a7b1c8-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs32-mha32-d128-p32-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "245adc84ce436089d51b0d4ea0d7dbe4d4382963bdc0a44113f1c61d8e339871",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "hJDkOsA0CGjQmGWFuZkeema7p+LQE+aw5YbHdNi5XUdctiEtaonhJaNH72PH+JjaCgprvZcTvhfF96q0y6j8Bg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "245adc84ce436089d51b0d4ea0d7dbe4d4382963bdc0a44113f1c61d8e339871"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-mha32-d128-p32-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs32-mha32-d128-p32-fp16-0.1.0.tar.gz",
+      "release_sha256": "9b6d2132052b1d6e06cee621d9e3040fb47020704bf1c69659eca886b25042c6",
+      "release_size": 115850
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-bf16-417f08863a33d4d7-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "ab5400021a777882ffc521a32f8db6dd594136fc95ce20bda4a1c283168ea0ed",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "GyIhvaOkBAQqDGQ6ARd0v7x83//QTrdCjGI3c7XbagpIaV0/S1A17dHFtJlxEwxWM9sFbJEIFYVxyNCf3SieBw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "ab5400021a777882ffc521a32f8db6dd594136fc95ce20bda4a1c283168ea0ed"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs64-gqa8-d256-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs64-gqa8-d256-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "b3970ff1ae808e4cd33c78f5d4a29b151b765cfd1f2f76824a4248fed4603601",
+      "release_size": 115852
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-fp16-02945d61764530ff-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs64-gqa8-d256-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "1f758c27b74e62407b491d47abd0bc479a2893083a40ff3713e13f87c047cd41",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "Fj7rBBP0Q+e2AowckpEl1SLS/ZCPxqUzQlKLM00HdGqMvj9E6M/zEae9ueJWCONSPefywB+A0FKGvhqtCAcyDg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "1f758c27b74e62407b491d47abd0bc479a2893083a40ff3713e13f87c047cd41"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs64-gqa8-d256-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs64-gqa8-d256-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "f06df44f3d6e341f59c6d36855a338089f719811e39debb8cab0d38678feb153",
+      "release_size": 115854
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-bf16-46b203caf2e81e18-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "a46e570e22c31a3c66a0126d35bdf56dbdc9212e5019b12c3843c38070fef960",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "+kd2auIpoUeHI4ql0Y9nasdcitXEkd7L2FmSMfBzYFYoZ1Ab/aZktw8dIvNlTUnn3c9K2uYJSwExsNsbGqupCA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "a46e570e22c31a3c66a0126d35bdf56dbdc9212e5019b12c3843c38070fef960"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs8-gqa8-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs8-gqa8-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "2dc52cca0d6d0513440c04eee5db46ea1527d2c21bf7b29a0c831cd9d6871fbe",
+      "release_size": 115849
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-fp16-a34bd1fb6b309541-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1151.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1151-beam-pairs8-gqa8-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f4ba726802021734d9dedf0b813bac56186f7d112f1398830003a774277a92e0"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "2952e1bc4eb6575e2c4ab7a6b696c13143a88d8458c8ae1be10496749123fd1b",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "aX4mGn1HjAXQgGUSWkS40ElzkY+IauTlRN6yv81Z1nr/d8EzVBR7wUl901V4fWAcP5Mdyrtwc4OtoghnElDWDA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "2952e1bc4eb6575e2c4ab7a6b696c13143a88d8458c8ae1be10496749123fd1b"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs8-gqa8-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1151-m6-20260918-beam-pairs8-gqa8-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "6474373ea3ce3de2b70c7a370ef84eff0a557491c454ed283b83b665863c619d",
+      "release_size": 115849
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-bf16-0903a18fc40b1a48-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "eca76d17a8945c42de1ea6fb2342fdd61dc0b022185dfb76870e24763cd44b46",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "RES6muczReQxTGeaw1N/G9V+H0C1NmIhvPaKKzMzzgv9rOWowqqSX14fcUYS7mwaNaYNrnfqbHKgerSixW5+BA==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "eca76d17a8945c42de1ea6fb2342fdd61dc0b022185dfb76870e24763cd44b46"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs1-gqa8-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs1-gqa8-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "e03f45bb45b55e179a1f6c27e215e6f9b133106455c2b1dcf592fce0cb48c0d0",
+      "release_size": 111452
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-fp16-e9eb4573088b7f81-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs1-gqa8-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "70e440a6db5c8d6c53fc81ee7d8b9b1ea36a33cfa211e0a94b5df7bddcdd6f2a",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "+sBbwp6+6HA5QovfJUcxP8qIIZgyKNHQZkrUY7knMEOAVm3RVVEgemmqXMgetz0c0XgrFRhunuDOvaOSEHmKBg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "70e440a6db5c8d6c53fc81ee7d8b9b1ea36a33cfa211e0a94b5df7bddcdd6f2a"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs1-gqa8-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs1-gqa8-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "8427998e77857e8ea547696a343a9110b0166c33789fe56d69cd169d2254c509",
+      "release_size": 111449
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16-80b8fd4924841c95-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_scalar",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "a53b8e447335357675a04f384cc13e313a846063003d49ba3936d1840f6d4f93",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "H2mm6fl5WmsoiJpHmQzdY6b3m+KNeWm7OBjzuxeIc4m/md8Yjm3mwDx0dXG5lCbVj3b57UJy0EWVGffXivkECg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "a53b8e447335357675a04f384cc13e313a846063003d49ba3936d1840f6d4f93"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-gqa8-d128-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-gqa8-d128-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "68260834db9a6cae609f677cd2c8df3caf26c7d69eaeda35e84d4356f4749ab0",
+      "release_size": 111453
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-fp16-d7924465ecb39a9b-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_scalar",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "6fab11f53ec183da9b4fe821bcca725d336676d6da26dcfffdc597013cd41924",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "5LM+RjPPOHYl1K22kAQNgcRv/2HYk1vMrAeUsf35qN33h3c5EwWH5MzXIHu73FmTK4UlkxTw/+D4l1g0YNjbCw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "6fab11f53ec183da9b4fe821bcca725d336676d6da26dcfffdc597013cd41924"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-gqa8-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-gqa8-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "8372d68f509c7161e6d5678c6e9397bf43a6af940b7a3413bf9dec1b1553559e",
+      "release_size": 111453
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-bf16-6b86c6e1c4ce3128-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "90293f1a63f4c46e76e840cef9f65febda6084dbc1730b2761dfcb34754756b2",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "FrE/fYHHDM5zA9fC7YU440xEi8hA8hmAfSxuZqt5JyiJLUmfT1eOTCpc7I1QlXBjHFM5K32sM7UCIyG+bMP5CQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "90293f1a63f4c46e76e840cef9f65febda6084dbc1730b2761dfcb34754756b2"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-mha32-d128-p32-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-mha32-d128-p32-bf16-0.1.0.tar.gz",
+      "release_sha256": "0eac30b338e37399b39c35c3f5621c5cd8ecf6d14ac478200dc216a4ebd2d046",
+      "release_size": 111449
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-fp16-7cd28fc12d8289de-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec8",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-mha32-d128-p32-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "466b85b7dece6af99836b12650902b5cff1ee63d886a0687d999b4930ed2e6fb",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "rYbErQV/cCVBv1i1kt+OagMECWrEJz2rme+PErf4PCvz+v3D2h0wwllDlnDZdf3S42yIETKJqrpcbhjcHW5bAQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "466b85b7dece6af99836b12650902b5cff1ee63d886a0687d999b4930ed2e6fb"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-mha32-d128-p32-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs32-mha32-d128-p32-fp16-0.1.0.tar.gz",
+      "release_sha256": "e0578400971430ca1ee6adc6937b74612e7307cda0d8fa3eac25aaebbc9334c8",
+      "release_size": 111445
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-bf16-d2bebea4d07ebfc4-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-bf16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "18703374a9beebd432d9812e07a07aabe54b88e457fd7d90cc2c6e30df5d25f9",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "K7h/c+ARtgrDVh1kpuncmx5ZIoRMFck2vWWx4CgQYwkF5/scsENcc8gHrgyqJ2SqPJ3yxX3VfV++R2CD4Fj9Ag==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "18703374a9beebd432d9812e07a07aabe54b88e457fd7d90cc2c6e30df5d25f9"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs64-gqa8-d256-p16-bf16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs64-gqa8-d256-p16-bf16-0.1.0.tar.gz",
+      "release_sha256": "5199ac6cdea8f729b235a9d3f61642f7ebb6083fbd894e2ff6284598c031f7cf",
+      "release_size": 111450
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-fp16-0e42cf9442ea48a0-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs64-gqa8-d256-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "22382b1d7cc21e63cde6a6c8dc3224abd50cb55ee2da1e6f8e856b5d1821a1ae",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "upHX8MXkg7qsgsCpiIuJATRwXuFSYlpW52IjvcfgNFjgzdD0uiS9SszvP/1dykL+1Rfo4LvEAkOjTsC0fXqKBQ==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "22382b1d7cc21e63cde6a6c8dc3224abd50cb55ee2da1e6f8e856b5d1821a1ae"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs64-gqa8-d256-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs64-gqa8-d256-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "3e312a070d5d32641e1732546636d76027d392710e9ce07bec37be2eadcde810",
+      "release_size": 111448
+    },
+    {
+      "approval_id": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs8-gqa8-d128-p16-fp16-33af9562c70bd9a2-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_kv_cache_gfx1201-repeat.so",
+          "entrypoint": "copy_vec4",
+          "evidence_id": "m6-20260918-kv_cache_copy-gfx1201-beam-pairs8-gqa8-d128-p16-fp16",
+          "format": "python_extension",
+          "operator": "kv_cache_copy",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "f0358e4fd9423870add76bc2d814b600a4dc43eb218aa95644f07c95083a4d22"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "3af859e0586390e4f327f9f5bcd3571124e2b85534ea7b02ab067bf89d5a7fc9",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "LVgy19AS4zLIE730WfFV1fSfzzNgtcHcjTaeAvIZLWqpGI1JSRYeOtCA6tLL3yZx26nXy41S8ig/MRm2xuXmCw==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "3af859e0586390e4f327f9f5bcd3571124e2b85534ea7b02ab067bf89d5a7fc9"
+      },
+      "pack_id": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs8-gqa8-d128-p16-fp16",
+      "pack_version": "0.1.0",
+      "release_file": "rk-kv-cache-copy-gfx1201-m6-20260918-beam-pairs8-gqa8-d128-p16-fp16-0.1.0.tar.gz",
+      "release_sha256": "6a17e7ea6eddc3d30672f57f3e497dd0528d73775fe9aa9e0a907d275fe878bd",
+      "release_size": 111448
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

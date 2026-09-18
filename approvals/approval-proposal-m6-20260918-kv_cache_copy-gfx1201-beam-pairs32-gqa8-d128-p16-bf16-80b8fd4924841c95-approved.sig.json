@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "QFOxQriXQLfs7S9fjoG1/oI6nh44xDdmyFSmeBeLnaIF6vVTK+v5lYPlupZ+d1lbtSk1FMaTXwDlzmOsKV7DAg==",
+  "signed_file": "approval-proposal-m6-20260918-kv_cache_copy-gfx1201-beam-pairs32-gqa8-d128-p16-bf16-80b8fd4924841c95-approved.json",
+  "signed_sha256": "38d9f0ee180d7113361c8b91a22dd9af975056b09cebe81ad46a4df3f23dd294"
+}

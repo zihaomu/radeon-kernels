@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m5-20260917-swiglu-gfx1151-prefill-h28672-fp16-d5eb31428fb234f3-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m5-20260917-swiglu-gfx1151-prefill-h28672-fp16-d5eb31428fb234f3",
+  "proposal_sha256": "4834736db99ba202a8e4fab5d7e9104cf30616064d34ad8a6884ee29225a02f6",
+  "reason": "Milestone 5 completion explicitly requested; all deterministic gates and sanitized evidence passed.",
+  "reviewed_at": "2026-09-17T12:50:47.675752+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

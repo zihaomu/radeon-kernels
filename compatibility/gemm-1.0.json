@@ -1,0 +1,18 @@
+{
+  "records": [
+    {
+      "approval_id": "approval-proposal-asmevo-gemm-20260917t050538z-gfx1151-k0-817bd5fbe4e49024-approved",
+      "architecture": "gfx1151",
+      "evidence_id": "asmevo-gemm-20260917t050538z-gfx1151-k0",
+      "id": "gemm-gfx1151-asmevo-gemm-20260917t050538z-gfx1151-k0",
+      "provider": "native",
+      "python_abi": "cp312",
+      "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+      "reason": "all deterministic promotion gates passed",
+      "rocm_abi": "7.15",
+      "status": "supported",
+      "wavefront_size": 32
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://radeon-kernels.dev/schemas/approval.schema.json",
+  "title": "Radeon Kernels human promotion approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "approval_id", "proposal_id", "proposal_sha256", "decision", "reviewer", "reviewed_at", "reason"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "approval_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "proposal_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "proposal_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "decision": {"enum": ["approved", "rejected"]},
+    "reviewer": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "reason": {"type": "string", "minLength": 1},
+    "override": {"type": "boolean"}
+  }
+}

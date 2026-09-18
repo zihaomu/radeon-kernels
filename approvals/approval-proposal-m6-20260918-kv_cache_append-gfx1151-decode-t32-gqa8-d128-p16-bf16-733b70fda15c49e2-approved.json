@@ -1,0 +1,10 @@
+{
+  "approval_id": "approval-proposal-m6-20260918-kv_cache_append-gfx1151-decode-t32-gqa8-d128-p16-bf16-733b70fda15c49e2-approved",
+  "decision": "approved",
+  "proposal_id": "proposal-m6-20260918-kv_cache_append-gfx1151-decode-t32-gqa8-d128-p16-bf16-733b70fda15c49e2",
+  "proposal_sha256": "8aeff5cd00fb2a63e900da9f1df866079d8314d6895d871bfbbcac6f9c488400",
+  "reason": "reviewed correctness, timing stability, exact paged-layout scope, and artifact lineage for all 33 KV-cache proposals",
+  "reviewed_at": "2026-09-18T02:34:26.222917+00:00",
+  "reviewer": "zmu",
+  "schema_version": "1.0"
+}

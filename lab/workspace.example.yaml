@@ -1,0 +1,14 @@
+schema_version: 1
+
+project_dir: ./radeon-kernels
+private_dir: ./lab-private
+
+inventory:
+  targets: ./lab-private/config/targets.yaml
+
+storage:
+  runs: ./lab-private/runs
+  state: ./lab-private/state
+  cache: ./lab-private/cache
+  exports: ./lab-private/exports
+

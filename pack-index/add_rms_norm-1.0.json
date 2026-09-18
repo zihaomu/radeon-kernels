@@ -1,0 +1,79 @@
+{
+  "operator": "add_rms_norm",
+  "packs": [
+    {
+      "approval_id": "approval-proposal-m5-20260917-add_rms_norm-gfx1201-small-prefill-h4096-fp16-c3070d282408e12f-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1201.so",
+          "entrypoint": "add_rms_norm",
+          "evidence_id": "m5-20260917-add_rms_norm-gfx1201-small-prefill-h4096-fp16",
+          "format": "python_extension",
+          "operator": "add_rms_norm",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "688c13b4aeb16a47a6b7eb7c011834b768956c7fac89e45165f1f944f81b7271"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1201",
+        "python_abi": "cp312",
+        "pytorch_version": "2.11.0+rocm7.2.4.git5fbd98f3",
+        "rocm_abi": "7.2",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "7698da9f25c60736fd00d2a16c584f91944c9a2cfe6e784aa3931fa9e51d8063",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "DUr0RpKwexVRaPY8+fJsE5MYGWIG3C5WHAGWy0yFJj6RfnCQ24Sg4mwZtgXa4Yns9kmhZqjYdDDyrjF7KeOtCg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "7698da9f25c60736fd00d2a16c584f91944c9a2cfe6e784aa3931fa9e51d8063"
+      },
+      "pack_id": "rk-add-rms-norm-gfx1201-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-add-rms-norm-gfx1201-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "7edeeaadeb5d3361018f0f3db62af409bbd7c5fb61815ea6a4b1c5afaf5940f1",
+      "release_size": 107929
+    },
+    {
+      "approval_id": "approval-proposal-m5-20260917-add_rms_norm-gfx1151-small-prefill-h4096-fp16-45d73db244b7ca6a-approved",
+      "artifacts": [
+        {
+          "artifact": "lib/radeon_kernels_llm_ops_gfx1151.so",
+          "entrypoint": "add_rms_norm",
+          "evidence_id": "m5-20260917-add_rms_norm-gfx1151-small-prefill-h4096-fp16",
+          "format": "python_extension",
+          "operator": "add_rms_norm",
+          "provider": "native",
+          "semantic_version": "1.0",
+          "sha256": "ea202a78725df1b9312ebd2a0c2065ce7865e876442b555abce9e8d6db0f209f"
+        }
+      ],
+      "environment": {
+        "architecture": "gfx1151",
+        "python_abi": "cp312",
+        "pytorch_version": "2.14.0a0+rocm7.15.0a20260719",
+        "rocm_abi": "7.15",
+        "wavefront_size": 32
+      },
+      "manifest_sha256": "7867d7b2aa0b04ddbf3f9631542933edc04235d6756e8bf2cdcddef446090a0b",
+      "manifest_signature": {
+        "algorithm": "ed25519",
+        "key_id": "rk-release-2026-09",
+        "schema_version": "1.0",
+        "signature": "AK43JG60AnSOxNZPp3MGaYN1egVrwolP+3C6VQ/9RcswjztcG7YilmnxPASE7pC0s/gs8DD4Jf7QCGr1qEeNCg==",
+        "signed_file": "manifest.json",
+        "signed_sha256": "7867d7b2aa0b04ddbf3f9631542933edc04235d6756e8bf2cdcddef446090a0b"
+      },
+      "pack_id": "rk-add-rms-norm-gfx1151-m5-20260917",
+      "pack_version": "0.1.0",
+      "release_file": "rk-add-rms-norm-gfx1151-m5-20260917-0.1.0.tar.gz",
+      "release_sha256": "bd125e7254d461424c1736d1140eac1514b145926b1133b43866ba58c330f1f0",
+      "release_size": 112954
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_version": "1.0"
+}

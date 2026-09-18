@@ -1,0 +1,8 @@
+{
+  "algorithm": "ed25519",
+  "key_id": "rk-release-2026-09",
+  "schema_version": "1.0",
+  "signature": "w4ga9nvaizKmG4m27Fpn7YUKN1VMMHy2BKhRynChzFkjVlNVi1i7SFm5tosj2fMSmHr1ZgEp4MfxWhI/P58uAw==",
+  "signed_file": "m6-20260918-gemv-gfx1201-decode-ffn-down-h4096-bf16.json",
+  "signed_sha256": "199a56eda9d988df949302934530bff4300656977ca8c0a9a6681ad1f63e5915"
+}

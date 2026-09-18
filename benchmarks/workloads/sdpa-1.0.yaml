@@ -1,0 +1,22 @@
+schema_version: 1
+operator: sdpa
+semantic_version: "1.0"
+oracle: torch_fp32_explicit_attention
+baseline: torch_scaled_dot_product_attention
+layout: batch_head_sequence_dim
+softmax: online_fp32
+benchmark:
+  warmups: 20
+  samples: 30
+  maximum_cv: 0.03
+  minimum_improvement_pct: 3.0
+cases:
+  - {id: b1-mha16-s128-d64-causal, batch: 1, query_heads: 16, kv_heads: 16, sequence: 128, head_dim: 64, causal: true}
+  - {id: b1-gqa32x8-s128-d128-causal, batch: 1, query_heads: 32, kv_heads: 8, sequence: 128, head_dim: 128, causal: true}
+  - {id: b1-gqa32x8-s256-d128-causal, batch: 1, query_heads: 32, kv_heads: 8, sequence: 256, head_dim: 128, causal: true}
+  - {id: b1-gqa32x8-s512-d128-causal, batch: 1, query_heads: 32, kv_heads: 8, sequence: 512, head_dim: 128, causal: true}
+  - {id: b4-gqa32x8-s128-d128-causal, batch: 4, query_heads: 32, kv_heads: 8, sequence: 128, head_dim: 128, causal: true}
+  - {id: b8-gqa32x8-s64-d128-causal, batch: 8, query_heads: 32, kv_heads: 8, sequence: 64, head_dim: 128, causal: true}
+  - {id: b1-mha16-s256-d64-noncausal, batch: 1, query_heads: 16, kv_heads: 16, sequence: 256, head_dim: 64, causal: false}
+  - {id: b2-gqa16x4-s256-d256-causal, batch: 2, query_heads: 16, kv_heads: 4, sequence: 256, head_dim: 256, causal: true}
+dtypes: [fp16, bf16]
