@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-08T07:11:36.407879+00:00",
+  "base_revision": "76ac6bd9c55a1f7c8c033bf13eb9f22646e3bfb3",
+  "kernel": "6.17.0-1032-oem",
+  "hipcc_version": "HIP version: 7.2.53211-e1a6bc5663\nAMD clang version 22.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-7.2.1 26084 f58b06dce1f9c15707c5f808fd002e18c2accf7e)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /opt/rocm-7.2.1/lib/llvm/bin\nConfiguration file: /opt/rocm-7.2.1/lib/llvm/bin/clang++.cfg\n",
+  "source_sha256": "ad6f15320c99a0aa8baecdcef042279600e36af8ad3896b26743946696535865",
+  "binary_sha256": "e61a5a75c5ab94f9ddced17908edb283bffc2f2c81af5e506c96fb1d1ea32160",
+  "driver_configuration": {
+    "/sys/module/ttm/parameters/pages_limit": "20971520",
+    "/etc/modprobe.d/ttm.conf": "options ttm pages_limit=20971520"
+  },
+  "sources": [
+    "https://docs.kernel.org/gpu/amdgpu/driver-core.html#memory-domains",
+    "https://docs.kernel.org/gpu/amdgpu/module-parameters.html",
+    "https://rocm.docs.amd.com/projects/HIP/en/docs-7.2.0/how-to/hip_runtime_api/memory_management/host_memory.html",
+    "https://rocm.docs.amd.com/projects/HIP/en/docs-7.2.0/how-to/hip_runtime_api/memory_management/coherence_control.html",
+    "https://github.com/ROCm/clr/blob/rocm-7.2.1/hipamd/src/hip_memory.cpp"
+  ],
+  "method": "uint32 affine update on GPU; full CPU validation at two synchronized handoffs",
+  "bandwidth_definition": "logical read+write bytes / median event time; decimal GB/s; not measured DRAM traffic",
+  "all_correct": true,
+  "traces_captured": true,
+  "trace_expectations_verified": true,
+  "device": {
+    "name": "AMD Radeon Graphics",
+    "arch": "gfx1151",
+    "hip_multiprocessor_count": 20,
+    "integrated": 1,
+    "can_map_host_memory": 1,
+    "pageable_memory_access": 0,
+    "managed_memory": 1,
+    "concurrent_managed_access": 1,
+    "hip_total_bytes": 85899345920,
+    "hip_free_bytes": 85895114752,
+    "vram_total_bytes": 536870912,
+    "gtt_total_bytes": 85899345920
+  },
+  "tests": [
+    {
+      "mode": "mapped",
+      "bytes": 268435456,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 12.56948,
+      "median_kernel_ms": 2.63397002,
+      "effective_read_write_GB_s": 203.825749,
+      "kernel_ms": [
+        2.75327492,
+        2.77066898,
+        2.76473808,
+        2.62867999,
+        2.60539699,
+        2.61136794,
+        2.63397002,
+        2.59533191,
+        2.5885601,
+        2.65764999,
+        2.69776607,
+        2.92743897,
+        2.63781309,
+        2.62174296,
+        2.60475111
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 67108864,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510377984,
+          "mlock_bytes": 0,
+          "rss_bytes": 102653952
+        },
+        "allocated": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510386176,
+          "mlock_bytes": 0,
+          "rss_bytes": 371273728
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 547356672,
+          "vram_used_bytes": 510484480,
+          "mlock_bytes": 0,
+          "rss_bytes": 438579200
+        },
+        "freed": {
+          "gtt_used_bytes": 547356672,
+          "vram_used_bytes": 510484480,
+          "mlock_bytes": 0,
+          "rss_bytes": 170209280
+        }
+      }
+    },
+    {
+      "mode": "mapped_coherent",
+      "bytes": 268435456,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 11.16596,
+      "median_kernel_ms": 2.636832,
+      "effective_read_write_GB_s": 203.604519,
+      "kernel_ms": [
+        2.65352106,
+        2.60675192,
+        2.62835407,
+        2.62085891,
+        2.66939092,
+        2.66738701,
+        2.90318489,
+        2.66120005,
+        2.6518209,
+        2.61354804,
+        2.60861802,
+        2.59863901,
+        2.636832,
+        2.62118793,
+        2.64350891
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 67108864,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 1073741826
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510382080,
+          "mlock_bytes": 0,
+          "rss_bytes": 102617088
+        },
+        "allocated": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510382080,
+          "mlock_bytes": 0,
+          "rss_bytes": 371236864
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 547356672,
+          "vram_used_bytes": 510484480,
+          "mlock_bytes": 0,
+          "rss_bytes": 438587392
+        },
+        "freed": {
+          "gtt_used_bytes": 547356672,
+          "vram_used_bytes": 510484480,
+          "mlock_bytes": 0,
+          "rss_bytes": 170217472
+        }
+      }
+    },
+    {
+      "mode": "host_noncoherent",
+      "bytes": 268435456,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 12.765069,
+      "median_kernel_ms": 2.67644,
+      "effective_read_write_GB_s": 200.591424,
+      "kernel_ms": [
+        2.67644,
+        2.69675803,
+        2.69130802,
+        2.67884493,
+        2.65347695,
+        2.6472261,
+        2.6531589,
+        2.75583196,
+        3.00770712,
+        2.86062908,
+        2.69211197,
+        2.67391801,
+        2.65916991,
+        2.66197801,
+        2.65564609
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 67108864,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2147483648
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510382080,
+          "mlock_bytes": 0,
+          "rss_bytes": 102621184
+        },
+        "allocated": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510386176,
+          "mlock_bytes": 0,
+          "rss_bytes": 371236864
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 547356672,
+          "vram_used_bytes": 510484480,
+          "mlock_bytes": 0,
+          "rss_bytes": 438550528
+        },
+        "freed": {
+          "gtt_used_bytes": 547356672,
+          "vram_used_bytes": 510484480,
+          "mlock_bytes": 0,
+          "rss_bytes": 170180608
+        }
+      }
+    },
+    {
+      "mode": "registered",
+      "bytes": 268435456,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 41.683253,
+      "median_kernel_ms": 2.69736791,
+      "effective_read_write_GB_s": 199.035108,
+      "kernel_ms": [
+        2.72955203,
+        2.71039605,
+        2.68951702,
+        2.69524789,
+        2.69120002,
+        2.68859506,
+        2.68258405,
+        2.74902892,
+        2.84280205,
+        2.81382704,
+        2.69736791,
+        2.70053291,
+        2.70594406,
+        2.68233895,
+        2.697047
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 67108864,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510382080,
+          "mlock_bytes": 0,
+          "rss_bytes": 102707200
+        },
+        "allocated": {
+          "gtt_used_bytes": 398368768,
+          "vram_used_bytes": 510914560,
+          "mlock_bytes": 0,
+          "rss_bytes": 371396608
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 545259520,
+          "vram_used_bytes": 511008768,
+          "mlock_bytes": 0,
+          "rss_bytes": 438697984
+        },
+        "freed": {
+          "gtt_used_bytes": 545259520,
+          "vram_used_bytes": 511008768,
+          "mlock_bytes": 0,
+          "rss_bytes": 170258432
+        }
+      }
+    },
+    {
+      "mode": "managed",
+      "bytes": 268435456,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 12.724743,
+      "median_kernel_ms": 2.64872003,
+      "effective_read_write_GB_s": 202.690698,
+      "kernel_ms": [
+        2.64659309,
+        2.61541295,
+        2.59814095,
+        2.66454601,
+        2.73115206,
+        2.80068302,
+        2.63421297,
+        2.64872003,
+        2.62102795,
+        2.61557794,
+        2.69472694,
+        2.77740312,
+        2.63032508,
+        2.78807592,
+        2.66018605
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 67108864,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 3,
+        "is_managed": 1,
+        "allocation_flags": 0
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 396271616,
+          "vram_used_bytes": 510377984,
+          "mlock_bytes": 0,
+          "rss_bytes": 102658048
+        },
+        "allocated": {
+          "gtt_used_bytes": 396271616,
+          "vram_used_bytes": 510386176,
+          "mlock_bytes": 0,
+          "rss_bytes": 371240960
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 545259520,
+          "vram_used_bytes": 510488576,
+          "mlock_bytes": 0,
+          "rss_bytes": 438546432
+        },
+        "freed": {
+          "gtt_used_bytes": 545259520,
+          "vram_used_bytes": 510488576,
+          "mlock_bytes": 0,
+          "rss_bytes": 170176512
+        }
+      }
+    },
+    {
+      "mode": "device",
+      "bytes": 268435456,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 51.53387,
+      "median_kernel_ms": 2.67652893,
+      "effective_read_write_GB_s": 200.58476,
+      "kernel_ms": [
+        2.66358399,
+        2.67833209,
+        2.64178395,
+        2.72441912,
+        2.81975889,
+        2.8688519,
+        2.71287704,
+        2.71035194,
+        2.67276192,
+        2.66875505,
+        2.65088105,
+        2.67652893,
+        2.66033912,
+        2.64390802,
+        2.699332
+      ],
+      "explicit_copy_bytes": 1073741824,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 67108864,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": false,
+        "hip_memory_type": 2,
+        "is_managed": 0,
+        "allocation_flags": 0
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 396271616,
+          "vram_used_bytes": 510377984,
+          "mlock_bytes": 0,
+          "rss_bytes": 102674432
+        },
+        "allocated": {
+          "gtt_used_bytes": 813686784,
+          "vram_used_bytes": 510939136,
+          "mlock_bytes": 0,
+          "rss_bytes": 455188480
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 813703168,
+          "vram_used_bytes": 510939136,
+          "mlock_bytes": 0,
+          "rss_bytes": 455475200
+        },
+        "freed": {
+          "gtt_used_bytes": 545267712,
+          "vram_used_bytes": 510939136,
+          "mlock_bytes": 0,
+          "rss_bytes": 187101184
+        }
+      }
+    },
+    {
+      "mode": "mapped",
+      "bytes": 1073741824,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 51.388536,
+      "median_kernel_ms": 10.7980185,
+      "effective_read_write_GB_s": 198.877568,
+      "kernel_ms": [
+        10.6760683,
+        11.1496019,
+        10.7028799,
+        11.2703514,
+        11.0991802,
+        10.6339016,
+        10.8175678,
+        11.2226934,
+        10.6108589,
+        10.7403088,
+        11.3552294,
+        10.7980185,
+        10.7522507,
+        11.411335,
+        10.6114254
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 268435456,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 396271616,
+          "vram_used_bytes": 510373888,
+          "mlock_bytes": 0,
+          "rss_bytes": 102645760
+        },
+        "allocated": {
+          "gtt_used_bytes": 396271616,
+          "vram_used_bytes": 510382080,
+          "mlock_bytes": 0,
+          "rss_bytes": 1176571904
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 545259520,
+          "vram_used_bytes": 510480384,
+          "mlock_bytes": 0,
+          "rss_bytes": 1243877376
+        },
+        "freed": {
+          "gtt_used_bytes": 541065216,
+          "vram_used_bytes": 502591488,
+          "mlock_bytes": 0,
+          "rss_bytes": 170201088
+        }
+      }
+    },
+    {
+      "mode": "mapped_coherent",
+      "bytes": 1073741824,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 49.575935,
+      "median_kernel_ms": 10.7691755,
+      "effective_read_write_GB_s": 199.410219,
+      "kernel_ms": [
+        11.0207663,
+        11.3047819,
+        10.7313404,
+        10.6973562,
+        11.0182076,
+        10.7691755,
+        10.6778421,
+        10.9104843,
+        11.0035801,
+        10.742506,
+        11.2356768,
+        10.7595787,
+        10.7152557,
+        10.6976223,
+        11.3156281
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 268435456,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 1073741826
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 392077312,
+          "vram_used_bytes": 502493184,
+          "mlock_bytes": 0,
+          "rss_bytes": 102637568
+        },
+        "allocated": {
+          "gtt_used_bytes": 392077312,
+          "vram_used_bytes": 502501376,
+          "mlock_bytes": 0,
+          "rss_bytes": 1176563712
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 541065216,
+          "vram_used_bytes": 502595584,
+          "mlock_bytes": 0,
+          "rss_bytes": 1243869184
+        },
+        "freed": {
+          "gtt_used_bytes": 541065216,
+          "vram_used_bytes": 502595584,
+          "mlock_bytes": 0,
+          "rss_bytes": 170192896
+        }
+      }
+    },
+    {
+      "mode": "host_noncoherent",
+      "bytes": 1073741824,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 52.209727,
+      "median_kernel_ms": 11.0545073,
+      "effective_read_write_GB_s": 194.263172,
+      "kernel_ms": [
+        11.0545073,
+        11.376153,
+        11.1597462,
+        11.3324709,
+        10.8077564,
+        10.7793016,
+        11.1815805,
+        11.0197964,
+        11.4827099,
+        11.1295586,
+        10.7229118,
+        10.7320089,
+        11.2125559,
+        10.9538269,
+        10.8097162
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 268435456,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2147483648
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 419356672,
+          "vram_used_bytes": 509140992,
+          "mlock_bytes": 0,
+          "rss_bytes": 102645760
+        },
+        "allocated": {
+          "gtt_used_bytes": 419356672,
+          "vram_used_bytes": 509149184,
+          "mlock_bytes": 0,
+          "rss_bytes": 1176567808
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 568344576,
+          "vram_used_bytes": 509251584,
+          "mlock_bytes": 0,
+          "rss_bytes": 1243877376
+        },
+        "freed": {
+          "gtt_used_bytes": 568344576,
+          "vram_used_bytes": 509251584,
+          "mlock_bytes": 0,
+          "rss_bytes": 170201088
+        }
+      }
+    },
+    {
+      "mode": "registered",
+      "bytes": 1073741824,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 160.153304,
+      "median_kernel_ms": 10.8691254,
+      "effective_read_write_GB_s": 197.576491,
+      "kernel_ms": [
+        10.7927008,
+        10.773344,
+        11.1375923,
+        11.2299271,
+        10.8691254,
+        11.1755838,
+        10.7250385,
+        10.749486,
+        10.8059931,
+        11.3867292,
+        10.9078255,
+        11.3636446,
+        10.7724886,
+        10.794611,
+        11.2668219
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 268435456,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 419356672,
+          "vram_used_bytes": 509136896,
+          "mlock_bytes": 0,
+          "rss_bytes": 102674432
+        },
+        "allocated": {
+          "gtt_used_bytes": 419356672,
+          "vram_used_bytes": 510304256,
+          "mlock_bytes": 0,
+          "rss_bytes": 1176670208
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 568344576,
+          "vram_used_bytes": 510337024,
+          "mlock_bytes": 0,
+          "rss_bytes": 1243996160
+        },
+        "freed": {
+          "gtt_used_bytes": 568344576,
+          "vram_used_bytes": 510337024,
+          "mlock_bytes": 0,
+          "rss_bytes": 170250240
+        }
+      }
+    },
+    {
+      "mode": "managed",
+      "bytes": 1073741824,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 51.089231,
+      "median_kernel_ms": 10.845582,
+      "effective_read_write_GB_s": 198.005386,
+      "kernel_ms": [
+        10.9670906,
+        10.845582,
+        11.4160576,
+        10.7935638,
+        10.7898722,
+        10.6829901,
+        11.3884811,
+        10.9890871,
+        10.6177874,
+        10.7716827,
+        10.9967079,
+        11.2921047,
+        10.7519255,
+        10.7212267,
+        10.9455709
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 268435456,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 3,
+        "is_managed": 1,
+        "allocation_flags": 0
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 419356672,
+          "vram_used_bytes": 509140992,
+          "mlock_bytes": 0,
+          "rss_bytes": 102645760
+        },
+        "allocated": {
+          "gtt_used_bytes": 419356672,
+          "vram_used_bytes": 509149184,
+          "mlock_bytes": 0,
+          "rss_bytes": 1176535040
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 549470208,
+          "vram_used_bytes": 509247488,
+          "mlock_bytes": 0,
+          "rss_bytes": 1243836416
+        },
+        "freed": {
+          "gtt_used_bytes": 549470208,
+          "vram_used_bytes": 509247488,
+          "mlock_bytes": 0,
+          "rss_bytes": 170160128
+        }
+      }
+    },
+    {
+      "mode": "device",
+      "bytes": 1073741824,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 196.980941,
+      "median_kernel_ms": 10.9722242,
+      "effective_read_write_GB_s": 195.719993,
+      "kernel_ms": [
+        11.3980246,
+        10.9074602,
+        11.3683701,
+        10.7436705,
+        10.562048,
+        10.6993866,
+        11.1386166,
+        10.867466,
+        10.8422184,
+        11.1195011,
+        10.9722242,
+        10.9642487,
+        11.4566984,
+        11.0326576,
+        11.1225872
+      ],
+      "explicit_copy_bytes": 4294967296,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 268435456,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": false,
+        "hip_memory_type": 2,
+        "is_managed": 0,
+        "allocation_flags": 0
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 400482304,
+          "vram_used_bytes": 509140992,
+          "mlock_bytes": 0,
+          "rss_bytes": 102641664
+        },
+        "allocated": {
+          "gtt_used_bytes": 1623203840,
+          "vram_used_bytes": 510509056,
+          "mlock_bytes": 0,
+          "rss_bytes": 1260466176
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 1613234176,
+          "vram_used_bytes": 502620160,
+          "mlock_bytes": 0,
+          "rss_bytes": 1260752896
+        },
+        "freed": {
+          "gtt_used_bytes": 539492352,
+          "vram_used_bytes": 502620160,
+          "mlock_bytes": 0,
+          "rss_bytes": 187072512
+        }
+      }
+    },
+    {
+      "mode": "host_noncoherent",
+      "bytes": 4294967296,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 204.54941,
+      "median_kernel_ms": 44.4614563,
+      "effective_read_write_GB_s": 193.199578,
+      "kernel_ms": [
+        45.7657051,
+        44.4614563,
+        43.9615517,
+        44.8250999,
+        44.2080231,
+        43.3855133,
+        45.2124977,
+        44.8277283,
+        43.9221001,
+        45.4026947,
+        43.862072,
+        43.4765053,
+        45.3279991,
+        45.5413208,
+        43.7481842
+      ],
+      "explicit_copy_bytes": 0,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 1073741824,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": true,
+        "hip_memory_type": 1,
+        "is_managed": 0,
+        "allocation_flags": 2147483648
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 390496256,
+          "vram_used_bytes": 501252096,
+          "mlock_bytes": 0,
+          "rss_bytes": 102711296
+        },
+        "allocated": {
+          "gtt_used_bytes": 390496256,
+          "vram_used_bytes": 501272576,
+          "mlock_bytes": 0,
+          "rss_bytes": 4397858816
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 546856960,
+          "vram_used_bytes": 505556992,
+          "mlock_bytes": 0,
+          "rss_bytes": 4465156096
+        },
+        "freed": {
+          "gtt_used_bytes": 546856960,
+          "vram_used_bytes": 505544704,
+          "mlock_bytes": 0,
+          "rss_bytes": 170254336
+        }
+      }
+    },
+    {
+      "mode": "device",
+      "bytes": 4294967296,
+      "samples": 15,
+      "warmups": 3,
+      "allocation_and_registration_ms": 790.906718,
+      "median_kernel_ms": 44.532341,
+      "effective_read_write_GB_s": 192.892051,
+      "kernel_ms": [
+        43.4767075,
+        44.532341,
+        43.8339043,
+        44.8880119,
+        45.7363358,
+        43.8196411,
+        44.9363823,
+        44.8376007,
+        43.6777306,
+        43.9299698,
+        44.5238075,
+        43.2119331,
+        44.6239548,
+        46.6553535,
+        45.2448196
+      ],
+      "explicit_copy_bytes": 17179869184,
+      "errors_first_handoff": 0,
+      "errors_second_handoff": 0,
+      "elements_checked_per_handoff": 1073741824,
+      "passed": true,
+      "pointer": {
+        "same_virtual_address": false,
+        "hip_memory_type": 2,
+        "is_managed": 0,
+        "allocation_flags": 0
+      },
+      "snapshots": {
+        "before": {
+          "gtt_used_bytes": 397869056,
+          "vram_used_bytes": 505438208,
+          "mlock_bytes": 0,
+          "rss_bytes": 102649856
+        },
+        "allocated": {
+          "gtt_used_bytes": 4841816064,
+          "vram_used_bytes": 508395520,
+          "mlock_bytes": 0,
+          "rss_bytes": 4481703936
+        },
+        "after_gpu": {
+          "gtt_used_bytes": 4841832448,
+          "vram_used_bytes": 508395520,
+          "mlock_bytes": 0,
+          "rss_bytes": 4481990656
+        },
+        "freed": {
+          "gtt_used_bytes": 546865152,
+          "vram_used_bytes": 508383232,
+          "mlock_bytes": 0,
+          "rss_bytes": 187084800
+        }
+      }
+    }
+  ],
+  "traces": [
+    {
+      "kernel_dispatch_count": 7,
+      "memory_copy_count": 0,
+      "hip_memcpy_api_count": 0,
+      "hsa_copy_api_count": 0,
+      "copy_directions": {},
+      "kernel_names": [
+        "affine_kernel(HIP_vector_type<unsigned int, 4u>*, unsigned long)"
+      ],
+      "expected_behavior_verified": true,
+      "mode": "host_noncoherent",
+      "passed": true,
+      "target_buffer_allocations": [
+        {
+          "agent_type": "CPU",
+          "allocation_bytes": 1073741824
+        }
+      ]
+    },
+    {
+      "kernel_dispatch_count": 7,
+      "memory_copy_count": 0,
+      "hip_memcpy_api_count": 0,
+      "hsa_copy_api_count": 0,
+      "copy_directions": {},
+      "kernel_names": [
+        "affine_kernel(HIP_vector_type<unsigned int, 4u>*, unsigned long)"
+      ],
+      "expected_behavior_verified": true,
+      "mode": "registered",
+      "passed": true,
+      "target_buffer_allocations": []
+    },
+    {
+      "kernel_dispatch_count": 7,
+      "memory_copy_count": 128,
+      "hip_memcpy_api_count": 4,
+      "hsa_copy_api_count": 128,
+      "copy_directions": {
+        "MEMORY_COPY_HOST_TO_DEVICE": 64,
+        "MEMORY_COPY_DEVICE_TO_HOST": 64
+      },
+      "kernel_names": [
+        "affine_kernel(HIP_vector_type<unsigned int, 4u>*, unsigned long)"
+      ],
+      "expected_behavior_verified": true,
+      "mode": "device",
+      "passed": true,
+      "target_buffer_allocations": [
+        {
+          "agent_type": "GPU",
+          "allocation_bytes": 1073741824
+        }
+      ]
+    }
+  ],
+  "gpu_compute_units": 40,
+  "processor": "AMD RYZEN AI MAX+ PRO 395 w/ Radeon 8060S",
+  "interpretation": [
+    "All buffer handoff checks passed=True; BIOS VRAM carve-out=536870912 bytes.",
+    "Driver GTT budget=85899345920 bytes; HIP reported allocation total=85899345920 bytes; largest validated buffer=4294967296 bytes.",
+    "Trace expectations verified=True: host/registered paths require GPU dispatches with zero data copies, and the device-buffer control requires copies.",
+    "Separate CPU/device buffers plus hipMemcpy still copy data, even when both allocations reside in system RAM on an APU.",
+    "Pointer equality alone is insufficient evidence of zero copy; CPU handoff correctness and traces were checked together.",
+    "Pinned/registered host pages are not necessarily included in the mem_info_gtt_used TTM counter; RSS and allocation-agent traces also matter.",
+    "GPU pageable-memory access capability=0; when this is 0, existing CPU buffers should be registered before passing them to a GPU kernel.",
+    "CPU and GPU take turns accessing the buffer, with system-scope synchronization; concurrent CPU/GPU writes were not tested.",
+    "The timings measure a streaming integer kernel, excluding allocation, CPU initialization, CPU verification, and explicit copies; no GEMM/LLM speed claim is made."
+  ]
+}
